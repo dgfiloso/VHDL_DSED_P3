@@ -1,0 +1,3 @@
+vhdl work "PIC_pkg.vhd"
+vhdl work "data_counter.vhd"
+vhdl work "DMA.vhd"

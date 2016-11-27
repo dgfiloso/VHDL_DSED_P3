@@ -1,0 +1,7 @@
+vhdl work "ipcore_dir/fifo.vhd"
+vhdl work "Pulse_width.vhd"
+vhdl work "Data_Count.vhd"
+vhdl work "ShiftRegister.vhd"
+vhdl work "RS232_TX.vhd"
+vhdl work "RS232_RX.vhd"
+vhdl work "RS232top.vhd"

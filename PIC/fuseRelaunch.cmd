@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "E:/David/Teleco/Curso_2016-2017/DSED/Practica 3/PIC/tb_ram_isim_beh.exe" -prj "E:/David/Teleco/Curso_2016-2017/DSED/Practica 3/PIC/tb_ram_beh.prj" "work.tb_ram" 

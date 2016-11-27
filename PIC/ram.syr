@@ -1,0 +1,606 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: ram.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ram.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ram"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : ram
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PIC_pkg.vhd" into library work
+Parsing package <PIC_pkg>.
+Parsing package body <PIC_pkg>.
+Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\RAM.vhd" into library work
+Parsing entity <ram>.
+Parsing architecture <behavior> of entity <ram>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <ram> (architecture <behavior>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ram>.
+    Related source file is "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\RAM.vhd".
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <contents_ram_general>, simulation mismatch.
+    Found 192x8-bit single-port RAM <Mram_contents_ram_general> for signal <contents_ram_general>.
+    Found 8-bit register for signal <contents_ram_specific<23>>.
+    Found 8-bit register for signal <contents_ram_specific<22>>.
+    Found 8-bit register for signal <contents_ram_specific<21>>.
+    Found 8-bit register for signal <contents_ram_specific<20>>.
+    Found 8-bit register for signal <contents_ram_specific<19>>.
+    Found 8-bit register for signal <contents_ram_specific<18>>.
+    Found 8-bit register for signal <contents_ram_specific<17>>.
+    Found 8-bit register for signal <contents_ram_specific<16>>.
+    Found 8-bit register for signal <contents_ram_specific<49>>.
+    Found 7-bit register for signal <Temp_H>.
+    Found 7-bit register for signal <Temp_L>.
+    Found 8-bit register for signal <valor_Switch>.
+    Found 8-bit register for signal <Switches>.
+    Found 1-bit register for signal <memory_election>.
+    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][7]_PWR_6_o_wide_mux_301_OUT>
+    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][3]_PWR_6_o_wide_mux_302_OUT>
+    Found 1-bit tristate buffer for signal <databus<7>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<6>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<5>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<4>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<3>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<2>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<1>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<0>> created at line 60
+    Found 8-bit comparator greater for signal <GND_6_o_address[7]_LessThan_1_o> created at line 37
+    Found 8-bit comparator greater for signal <address[7]_GND_6_o_LessThan_2_o> created at line 39
+    Summary:
+	inferred   3 RAM(s).
+	inferred 103 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   8 Tristate(s).
+Unit <ram> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x7-bit single-port Read Only RAM                    : 2
+ 192x8-bit single-port RAM                             : 1
+# Registers                                            : 14
+ 1-bit register                                        : 1
+ 7-bit register                                        : 2
+ 8-bit register                                        : 11
+# Comparators                                          : 2
+ 8-bit comparator greater                              : 2
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <contents_ram_specific_23_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_7> of sequential type is unconnected in block <ram>.
+
+Synthesizing (advanced) Unit <ram>.
+INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][7]_PWR_6_o_wide_mux_301_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <contents_ram_specific<49><7:4>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][3]_PWR_6_o_wide_mux_302_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <contents_ram_specific<49><3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_contents_ram_general> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 192-word x 8-bit                    |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <databus>       |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ram> synthesized (advanced).
+WARNING:Xst:2677 - Node <contents_ram_specific_23_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_23_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_22_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_21_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_18_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_20_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_19_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_17_7> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_1> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_2> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_3> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_4> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_5> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_6> of sequential type is unconnected in block <ram>.
+WARNING:Xst:2677 - Node <contents_ram_specific_16_7> of sequential type is unconnected in block <ram>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x7-bit single-port distributed Read Only RAM        : 2
+ 192x8-bit single-port distributed RAM                 : 1
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+# Comparators                                          : 2
+ 8-bit comparator greater                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ram> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ram, actual ratio is 0.
+
+Final Macro Processing ...
+
+Processing Unit <ram> :
+	Found 2-bit shift register for signal <Switches_0>.
+	Found 2-bit shift register for signal <Switches_1>.
+	Found 2-bit shift register for signal <Switches_2>.
+	Found 2-bit shift register for signal <Switches_3>.
+	Found 2-bit shift register for signal <Switches_4>.
+	Found 2-bit shift register for signal <Switches_5>.
+	Found 2-bit shift register for signal <Switches_6>.
+	Found 2-bit shift register for signal <Switches_7>.
+Unit <ram> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+# Shift Registers                                      : 8
+ 2-bit shift register                                  : 8
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ram.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 45
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 8
+#      LUT4                        : 15
+#      LUT5                        : 1
+#      LUT6                        : 16
+#      VCC                         : 1
+# FlipFlops/Latches                : 39
+#      FD                          : 15
+#      FDC                         : 8
+#      FDCE                        : 7
+#      FDE                         : 8
+#      FDPE                        : 1
+# RAMS                             : 8
+#      RAM256X1S                   : 8
+# Shift Registers                  : 8
+#      SRLC16E                     : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 41
+#      IBUF                        : 11
+#      IOBUF                       : 8
+#      OBUF                        : 22
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              39  out of  18224     0%  
+ Number of Slice LUTs:                   83  out of   9112     0%  
+    Number used as Logic:                43  out of   9112     0%  
+    Number used as Memory:               40  out of   2176     1%  
+       Number used as RAM:               32
+       Number used as SRL:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     83
+   Number with an unused Flip Flop:      44  out of     83    53%  
+   Number with an unused LUT:             0  out of     83     0%  
+   Number of fully used LUT-FF pairs:    39  out of     83    46%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  42  out of    232    18%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 55    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.481ns (Maximum Frequency: 403.006MHz)
+   Minimum input arrival time before clock: 5.067ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: 4.595ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 2.481ns (frequency: 403.006MHz)
+  Total number of paths / destination ports: 112 / 62
+-------------------------------------------------------------------------
+Delay:               2.481ns (Levels of Logic = 1)
+  Source:            memory_election (FF)
+  Destination:       Mram_contents_ram_general1 (RAM)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: memory_election to Mram_contents_ram_general1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              17   0.447   1.028  memory_election (memory_election)
+     LUT2:I1->O            8   0.205   0.802  write_en_memory_election_AND_1_o1 (write_en_memory_election_AND_1_o)
+     RAM256X1S:WE              0.000          Mram_contents_ram_general1
+    ----------------------------------------
+    Total                      2.481ns (0.652ns logic, 1.829ns route)
+                                       (26.3% logic, 73.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 242 / 113
+-------------------------------------------------------------------------
+Offset:              5.067ns (Levels of Logic = 4)
+  Source:            address<2> (PAD)
+  Destination:       contents_ram_specific_49_0 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: address<2> to contents_ram_specific_49_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.275  address_2_IBUF (address_2_IBUF)
+     LUT4:I0->O            1   0.203   0.827  _n0193_inv_SW0 (N2)
+     LUT5:I1->O            8   0.203   1.031  _n0193_inv_rstpot (_n0193_inv_rstpot)
+     LUT3:I0->O            1   0.205   0.000  contents_ram_specific_49_0_dpot (contents_ram_specific_49_0_dpot)
+     FDCE:D                    0.102          contents_ram_specific_49_0
+    ----------------------------------------
+    Total                      5.067ns (1.935ns logic, 3.132ns route)
+                                       (38.2% logic, 61.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Switches_7 (FF)
+  Destination:       Switches<7> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: Switches_7 to Switches<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  Switches_7 (Switches_7)
+     OBUF:I->O                 2.571          Switches_7_OBUF (Switches<7>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               4.595ns (Levels of Logic = 2)
+  Source:            oe (PAD)
+  Destination:       databus<7> (PAD)
+
+  Data Path: oe to databus<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.802  oe_IBUF (oe_IBUF)
+     IOBUF:T->IO               2.571          databus_7_IOBUF (databus<7>)
+    ----------------------------------------
+    Total                      4.595ns (3.793ns logic, 0.802ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    2.481|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.89 secs
+ 
+--> 
+
+Total memory usage is 257532 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  113 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

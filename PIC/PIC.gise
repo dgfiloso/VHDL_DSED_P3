@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="PIC.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="DMA.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="DMA.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="DMA.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="DMA.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DMA.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="DMA.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="DMA.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="DMA.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DMA_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="PICtop.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="PICtop.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PICtop.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="PICtop.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="PICtop.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="PICtop_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="PICtop_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="PICtop_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Pulse_width.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Pulse_width.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Pulse_width.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RS232top.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RS232top.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RS232top.xst"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ram.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ram.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ram.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ram.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ram.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ram.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ram.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ram.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ram_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ram_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ram_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_ram_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tb_ram_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="tb_ram_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1479813939" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1479813939">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1480249246" xil_pn:in_ck="-5605319474831202373" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1480249245">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="CPU.vhd"/>
+      <outfile xil_pn:name="DMA.vhd"/>
+      <outfile xil_pn:name="Data_Count.vhd"/>
+      <outfile xil_pn:name="PIC_pkg.vhd"/>
+      <outfile xil_pn:name="PICtop.vhd"/>
+      <outfile xil_pn:name="Pulse_width.vhd"/>
+      <outfile xil_pn:name="RAM.vhd"/>
+      <outfile xil_pn:name="ROM.vhd"/>
+      <outfile xil_pn:name="RS232_RX.vhd"/>
+      <outfile xil_pn:name="RS232_TX.vhd"/>
+      <outfile xil_pn:name="RS232_test.vhd"/>
+      <outfile xil_pn:name="RS232top.vhd"/>
+      <outfile xil_pn:name="ShiftRegister.vhd"/>
+      <outfile xil_pn:name="data_counter.vhd"/>
+      <outfile xil_pn:name="tb_PICtop.vhd"/>
+      <outfile xil_pn:name="tb_ram.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1480249246" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7199266610915035445" xil_pn:start_ts="1480249246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1480249246" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8441795394643181239" xil_pn:start_ts="1480249246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1480249246" xil_pn:in_ck="2640052728245442763" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6371873352513400306" xil_pn:start_ts="1480249246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/fifo.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/fifo.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1480249246" xil_pn:in_ck="-5605319474831202373" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1480249246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="CPU.vhd"/>
+      <outfile xil_pn:name="DMA.vhd"/>
+      <outfile xil_pn:name="Data_Count.vhd"/>
+      <outfile xil_pn:name="PIC_pkg.vhd"/>
+      <outfile xil_pn:name="PICtop.vhd"/>
+      <outfile xil_pn:name="Pulse_width.vhd"/>
+      <outfile xil_pn:name="RAM.vhd"/>
+      <outfile xil_pn:name="ROM.vhd"/>
+      <outfile xil_pn:name="RS232_RX.vhd"/>
+      <outfile xil_pn:name="RS232_TX.vhd"/>
+      <outfile xil_pn:name="RS232_test.vhd"/>
+      <outfile xil_pn:name="RS232top.vhd"/>
+      <outfile xil_pn:name="ShiftRegister.vhd"/>
+      <outfile xil_pn:name="data_counter.vhd"/>
+      <outfile xil_pn:name="tb_PICtop.vhd"/>
+      <outfile xil_pn:name="tb_ram.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1480249255" xil_pn:in_ck="4618550865663575550" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4045239320871975498" xil_pn:start_ts="1480249246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="tb_ram_beh.prj"/>
+      <outfile xil_pn:name="tb_ram_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1480249271" xil_pn:in_ck="-7940791688296768924" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4773966279691851875" xil_pn:start_ts="1480249271">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="tb_ram_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1479813291" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1479813290">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1479387493" xil_pn:in_ck="3818596305887355" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3351448343400692134" xil_pn:start_ts="1479387493">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+  </transforms>
+
+</generated_project>

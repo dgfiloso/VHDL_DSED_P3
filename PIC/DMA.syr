@@ -1,0 +1,494 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: DMA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DMA.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DMA"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : DMA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PIC_pkg.vhd" into library work
+Parsing package <PIC_pkg>.
+Parsing package body <PIC_pkg>.
+Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\data_counter.vhd" into library work
+Parsing entity <data_counter>.
+Parsing architecture <Behavioral> of entity <data_counter>.
+Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\DMA.vhd" into library work
+Parsing entity <DMA>.
+Parsing architecture <Behavioral> of entity <dma>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <DMA> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\DMA.vhd" Line 184. Case statement is complete. others clause is never selected
+
+Elaborating entity <data_counter> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <DMA>.
+    Related source file is "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\DMA.vhd".
+WARNING:Xst:647 - Input <RX_Full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ACK_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <TX_RDY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <current_state>.
+INFO:Xst:1799 - State tx is never reached in FSM <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4x4-bit Read Only RAM for signal <_n0107>
+    Found 1-bit 4-to-1 multiplexer for signal <enable_counter> created at line 142.
+    Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_count[1]_Mux_25_o> created at line 142.
+    Found 1-bit tristate buffer for signal <Address<7>> created at line 126
+    Found 1-bit tristate buffer for signal <Address<6>> created at line 126
+    Found 1-bit tristate buffer for signal <Address<5>> created at line 126
+    Found 1-bit tristate buffer for signal <Address<4>> created at line 126
+    Found 1-bit tristate buffer for signal <Address<3>> created at line 126
+    Found 1-bit tristate buffer for signal <Address<2>> created at line 126
+    Found 1-bit tristate buffer for signal <Address<1>> created at line 126
+    Found 1-bit tristate buffer for signal <Address<0>> created at line 126
+    Found 1-bit tristate buffer for signal <Databus<7>> created at line 126
+    Found 1-bit tristate buffer for signal <Databus<6>> created at line 126
+    Found 1-bit tristate buffer for signal <Databus<5>> created at line 126
+    Found 1-bit tristate buffer for signal <Databus<4>> created at line 126
+    Found 1-bit tristate buffer for signal <Databus<3>> created at line 126
+    Found 1-bit tristate buffer for signal <Databus<2>> created at line 126
+    Found 1-bit tristate buffer for signal <Databus<1>> created at line 126
+    Found 1-bit tristate buffer for signal <Databus<0>> created at line 126
+    Found 1-bit tristate buffer for signal <Write_en> created at line 126
+    Found 1-bit tristate buffer for signal <OE> created at line 126
+    Summary:
+	inferred   1 RAM(s).
+	inferred   7 Multiplexer(s).
+	inferred  18 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <DMA> synthesized.
+
+Synthesizing Unit <data_counter>.
+    Related source file is "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\data_counter.vhd".
+WARNING:Xst:647 - Input <enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <cuenta>.
+    Found 2-bit adder for signal <cuenta[1]_GND_25_o_add_1_OUT> created at line 56.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <data_counter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 1
+ 2-bit adder                                           : 1
+# Registers                                            : 1
+ 2-bit register                                        : 1
+# Multiplexers                                         : 7
+ 1-bit 2-to-1 multiplexer                              : 3
+ 1-bit 4-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+# Tristates                                            : 18
+ 1-bit tristate buffer                                 : 18
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <DMA>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0107> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <DMA> synthesized (advanced).
+
+Synthesizing (advanced) Unit <data_counter>.
+The following registers are absorbed into counter <cuenta>: 1 register on signal <cuenta>.
+Unit <data_counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 4-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:2]> with user encoding.
+------------------------
+ State      | Encoding
+------------------------
+ idle       | 00
+ tx         | unreached
+ wait_buses | 10
+ rx         | 11
+------------------------
+
+Optimizing unit <DMA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DMA, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DMA.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 20
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 3
+#      LUT3                        : 4
+#      LUT4                        : 2
+#      LUT5                        : 8
+#      VCC                         : 1
+# FlipFlops/Latches                : 4
+#      FD                          : 2
+#      FDC                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 12
+#      IOBUF                       : 8
+#      OBUF                        : 12
+#      OBUFT                       : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               4  out of  18224     0%  
+ Number of Slice LUTs:                   18  out of   9112     0%  
+    Number used as Logic:                18  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     18
+   Number with an unused Flip Flop:      14  out of     18    77%  
+   Number with an unused LUT:             0  out of     18     0%  
+   Number of fully used LUT-FF pairs:     4  out of     18    22%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          46
+ Number of bonded IOBs:                  43  out of    232    18%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.891ns (Maximum Frequency: 528.877MHz)
+   Minimum input arrival time before clock: 2.374ns
+   Maximum output required time after clock: 5.234ns
+   Maximum combinational path delay: 5.499ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 1.891ns (frequency: 528.877MHz)
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Delay:               1.891ns (Levels of Logic = 1)
+  Source:            BitCounter/cuenta_1 (FF)
+  Destination:       BitCounter/cuenta_1 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: BitCounter/cuenta_1 to BitCounter/cuenta_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              12   0.447   1.137  BitCounter/cuenta_1 (BitCounter/cuenta_1)
+     LUT3:I0->O            1   0.205   0.000  BitCounter/cuenta_1_rstpot (BitCounter/cuenta_1_rstpot)
+     FD:D                      0.102          BitCounter/cuenta_1
+    ----------------------------------------
+    Total                      1.891ns (0.754ns logic, 1.137ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 5 / 4
+-------------------------------------------------------------------------
+Offset:              2.374ns (Levels of Logic = 2)
+  Source:            DMA_ACK (PAD)
+  Destination:       current_state_FSM_FFd1 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: DMA_ACK to current_state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.845  DMA_ACK_IBUF (DMA_ACK_IBUF)
+     LUT4:I1->O            1   0.205   0.000  current_state_FSM_FFd1-In1 (current_state_FSM_FFd1-In)
+     FDC:D                     0.102          current_state_FSM_FFd1
+    ----------------------------------------
+    Total                      2.374ns (1.529ns logic, 0.845ns route)
+                                       (64.4% logic, 35.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 85 / 29
+-------------------------------------------------------------------------
+Offset:              5.234ns (Levels of Logic = 2)
+  Source:            current_state_FSM_FFd1 (FF)
+  Destination:       Address<7> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: current_state_FSM_FFd1 to Address<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.447   1.210  current_state_FSM_FFd1 (current_state_FSM_FFd1)
+     LUT4:I1->O            8   0.205   0.802  current_state[1]_count[1]_Mux_25_o_inv1 (current_state[1]_count[1]_Mux_25_o_inv)
+     OBUFT:T->O                2.571          Address_7_OBUFT (Address<7>)
+    ----------------------------------------
+    Total                      5.234ns (3.223ns logic, 2.011ns route)
+                                       (61.6% logic, 38.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Delay:               5.499ns (Levels of Logic = 3)
+  Source:            Databus<7> (PAD)
+  Destination:       TX_Data<7> (PAD)
+
+  Data Path: Databus<7> to TX_Data<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.222   0.924  Databus_7_IOBUF (N01)
+     LUT5:I0->O            1   0.203   0.579  Mmux_TX_Data81 (TX_Data_7_OBUF)
+     OBUF:I->O                 2.571          TX_Data_7_OBUF (TX_Data<7>)
+    ----------------------------------------
+    Total                      5.499ns (3.996ns logic, 1.503ns route)
+                                       (72.7% logic, 27.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    1.891|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.64 secs
+ 
+--> 
+
+Total memory usage is 257020 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

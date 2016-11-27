@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/David/Teleco/Curso_2016-2017/DSED/Practica 3/PIC/DMA.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/David/Teleco/Curso_2016-2017/DSED/Practica 3/PIC/tb_PIC.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

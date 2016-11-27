@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: ram.prj
 
@@ -108,10 +108,10 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PIC_pkg.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\PIC_pkg.vhd" into library work
 Parsing package <PIC_pkg>.
 Parsing package body <PIC_pkg>.
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\RAM.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RAM.vhd" into library work
 Parsing entity <ram>.
 Parsing architecture <behavior> of entity <ram>.
 
@@ -126,9 +126,19 @@ Elaborating entity <ram> (architecture <behavior>) from library <work>.
 =========================================================================
 
 Synthesizing Unit <ram>.
-    Related source file is "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\RAM.vhd".
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RAM.vhd".
 WARNING:Xst:3035 - Index value(s) does not match array range for signal <contents_ram_general>, simulation mismatch.
     Found 192x8-bit single-port RAM <Mram_contents_ram_general> for signal <contents_ram_general>.
+    Found 8-bit register for signal <contents_ram_specific<41>>.
+    Found 8-bit register for signal <contents_ram_specific<40>>.
+    Found 8-bit register for signal <contents_ram_specific<39>>.
+    Found 8-bit register for signal <contents_ram_specific<38>>.
+    Found 8-bit register for signal <contents_ram_specific<37>>.
+    Found 8-bit register for signal <contents_ram_specific<36>>.
+    Found 8-bit register for signal <contents_ram_specific<35>>.
+    Found 8-bit register for signal <contents_ram_specific<34>>.
+    Found 8-bit register for signal <contents_ram_specific<33>>.
+    Found 8-bit register for signal <contents_ram_specific<32>>.
     Found 8-bit register for signal <contents_ram_specific<23>>.
     Found 8-bit register for signal <contents_ram_specific<22>>.
     Found 8-bit register for signal <contents_ram_specific<21>>.
@@ -137,14 +147,67 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <content
     Found 8-bit register for signal <contents_ram_specific<18>>.
     Found 8-bit register for signal <contents_ram_specific<17>>.
     Found 8-bit register for signal <contents_ram_specific<16>>.
+    Found 8-bit register for signal <contents_ram_specific<5>>.
+    Found 8-bit register for signal <contents_ram_specific<4>>.
+    Found 8-bit register for signal <contents_ram_specific<3>>.
+    Found 8-bit register for signal <contents_ram_specific<2>>.
+    Found 8-bit register for signal <contents_ram_specific<1>>.
+    Found 8-bit register for signal <contents_ram_specific<0>>.
     Found 8-bit register for signal <contents_ram_specific<49>>.
+    Found 8-bit register for signal <contents_ram_specific<63>>.
+    Found 8-bit register for signal <contents_ram_specific<62>>.
+    Found 8-bit register for signal <contents_ram_specific<61>>.
+    Found 8-bit register for signal <contents_ram_specific<60>>.
+    Found 8-bit register for signal <contents_ram_specific<59>>.
+    Found 8-bit register for signal <contents_ram_specific<58>>.
+    Found 8-bit register for signal <contents_ram_specific<57>>.
+    Found 8-bit register for signal <contents_ram_specific<56>>.
+    Found 8-bit register for signal <contents_ram_specific<55>>.
+    Found 8-bit register for signal <contents_ram_specific<54>>.
+    Found 8-bit register for signal <contents_ram_specific<53>>.
+    Found 8-bit register for signal <contents_ram_specific<52>>.
+    Found 8-bit register for signal <contents_ram_specific<51>>.
+    Found 8-bit register for signal <contents_ram_specific<50>>.
+    Found 8-bit register for signal <contents_ram_specific<48>>.
+    Found 8-bit register for signal <contents_ram_specific<47>>.
+    Found 8-bit register for signal <contents_ram_specific<46>>.
+    Found 8-bit register for signal <contents_ram_specific<45>>.
+    Found 8-bit register for signal <contents_ram_specific<44>>.
+    Found 8-bit register for signal <contents_ram_specific<43>>.
+    Found 8-bit register for signal <contents_ram_specific<42>>.
+    Found 8-bit register for signal <contents_ram_specific<31>>.
+    Found 8-bit register for signal <contents_ram_specific<30>>.
+    Found 8-bit register for signal <contents_ram_specific<29>>.
+    Found 8-bit register for signal <contents_ram_specific<28>>.
+    Found 8-bit register for signal <contents_ram_specific<27>>.
+    Found 8-bit register for signal <contents_ram_specific<26>>.
+    Found 8-bit register for signal <contents_ram_specific<25>>.
+    Found 8-bit register for signal <contents_ram_specific<24>>.
+    Found 8-bit register for signal <contents_ram_specific<15>>.
+    Found 8-bit register for signal <contents_ram_specific<14>>.
+    Found 8-bit register for signal <contents_ram_specific<13>>.
+    Found 8-bit register for signal <contents_ram_specific<12>>.
+    Found 8-bit register for signal <contents_ram_specific<11>>.
+    Found 8-bit register for signal <contents_ram_specific<10>>.
+    Found 8-bit register for signal <contents_ram_specific<9>>.
+    Found 8-bit register for signal <contents_ram_specific<8>>.
+    Found 8-bit register for signal <contents_ram_specific<7>>.
+    Found 8-bit register for signal <contents_ram_specific<6>>.
     Found 7-bit register for signal <Temp_H>.
     Found 7-bit register for signal <Temp_L>.
     Found 8-bit register for signal <valor_Switch>.
     Found 8-bit register for signal <Switches>.
     Found 1-bit register for signal <memory_election>.
-    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][7]_PWR_6_o_wide_mux_301_OUT>
-    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][3]_PWR_6_o_wide_mux_302_OUT>
+    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][7]_PWR_6_o_wide_mux_303_OUT>
+    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][3]_PWR_6_o_wide_mux_304_OUT>
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<6>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<5>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<4>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<3>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<2>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<1>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<0>> created at line 60.
     Found 1-bit tristate buffer for signal <databus<7>> created at line 60
     Found 1-bit tristate buffer for signal <databus<6>> created at line 60
     Found 1-bit tristate buffer for signal <databus<5>> created at line 60
@@ -157,8 +220,9 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <content
     Found 8-bit comparator greater for signal <address[7]_GND_6_o_LessThan_2_o> created at line 39
     Summary:
 	inferred   3 RAM(s).
-	inferred 103 D-type flip-flop(s).
+	inferred 543 D-type flip-flop(s).
 	inferred   2 Comparator(s).
+	inferred  16 Multiplexer(s).
 	inferred   8 Tristate(s).
 Unit <ram> synthesized.
 
@@ -169,12 +233,15 @@ Macro Statistics
 # RAMs                                                 : 3
  16x7-bit single-port Read Only RAM                    : 2
  192x8-bit single-port RAM                             : 1
-# Registers                                            : 14
+# Registers                                            : 69
  1-bit register                                        : 1
  7-bit register                                        : 2
- 8-bit register                                        : 11
+ 8-bit register                                        : 66
 # Comparators                                          : 2
  8-bit comparator greater                              : 2
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 8
+ 1-bit 64-to-1 multiplexer                             : 8
 # Tristates                                            : 8
  1-bit tristate buffer                                 : 8
 
@@ -184,65 +251,9 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:2677 - Node <contents_ram_specific_23_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_7> of sequential type is unconnected in block <ram>.
 
 Synthesizing (advanced) Unit <ram>.
-INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][7]_PWR_6_o_wide_mux_301_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][7]_PWR_6_o_wide_mux_303_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -253,7 +264,7 @@ INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][7]_PWR_6_o_wide_mu
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][3]_PWR_6_o_wide_mux_302_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][3]_PWR_6_o_wide_mux_304_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -277,62 +288,6 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_contents_ram_general> will be implem
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <ram> synthesized (advanced).
-WARNING:Xst:2677 - Node <contents_ram_specific_23_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_23_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_22_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_21_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_18_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_20_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_19_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_17_7> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_1> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_2> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_3> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_4> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_5> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_6> of sequential type is unconnected in block <ram>.
-WARNING:Xst:2677 - Node <contents_ram_specific_16_7> of sequential type is unconnected in block <ram>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -341,10 +296,12 @@ Macro Statistics
 # RAMs                                                 : 3
  16x7-bit single-port distributed Read Only RAM        : 2
  192x8-bit single-port distributed RAM                 : 1
-# Registers                                            : 47
- Flip-Flops                                            : 47
+# Registers                                            : 543
+ Flip-Flops                                            : 543
 # Comparators                                          : 2
  8-bit comparator greater                              : 2
+# Multiplexers                                         : 8
+ 1-bit 64-to-1 multiplexer                             : 8
 
 =========================================================================
 
@@ -356,7 +313,8 @@ Optimizing unit <ram> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ram, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block ram, actual ratio is 8.
+FlipFlop memory_election has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -375,8 +333,8 @@ Unit <ram> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 31
- Flip-Flops                                            : 31
+# Registers                                            : 529
+ Flip-Flops                                            : 529
 # Shift Registers                                      : 8
  2-bit shift register                                  : 8
 
@@ -401,21 +359,18 @@ Top Level Output File Name         : ram.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 45
+# BELS                             : 739
 #      GND                         : 1
 #      INV                         : 1
 #      LUT2                        : 2
-#      LUT3                        : 8
-#      LUT4                        : 15
-#      LUT5                        : 1
-#      LUT6                        : 16
+#      LUT4                        : 22
+#      LUT6                        : 712
 #      VCC                         : 1
-# FlipFlops/Latches                : 39
-#      FD                          : 15
-#      FDC                         : 8
-#      FDCE                        : 7
+# FlipFlops/Latches                : 537
+#      FD                          : 329
+#      FDC                         : 199
 #      FDE                         : 8
-#      FDPE                        : 1
+#      FDP                         : 1
 # RAMS                             : 8
 #      RAM256X1S                   : 8
 # Shift Registers                  : 8
@@ -434,19 +389,19 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              39  out of  18224     0%  
- Number of Slice LUTs:                   83  out of   9112     0%  
-    Number used as Logic:                43  out of   9112     0%  
+ Number of Slice Registers:             537  out of  18224     2%  
+ Number of Slice LUTs:                  777  out of   9112     8%  
+    Number used as Logic:               737  out of   9112     8%  
     Number used as Memory:               40  out of   2176     1%  
        Number used as RAM:               32
        Number used as SRL:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     83
-   Number with an unused Flip Flop:      44  out of     83    53%  
-   Number with an unused LUT:             0  out of     83     0%  
-   Number of fully used LUT-FF pairs:    39  out of     83    46%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:    778
+   Number with an unused Flip Flop:     241  out of    778    30%  
+   Number with an unused LUT:             1  out of    778     0%  
+   Number of fully used LUT-FF pairs:   536  out of    778    68%  
+   Number of unique control sets:         3
 
 IO Utilization: 
  Number of IOs:                          42
@@ -476,7 +431,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 55    |
+Clk                                | BUFGP                  | 553   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -487,10 +442,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.481ns (Maximum Frequency: 403.006MHz)
-   Minimum input arrival time before clock: 5.067ns
-   Maximum output required time after clock: 3.597ns
-   Maximum combinational path delay: 4.595ns
+   Minimum period: 2.945ns (Maximum Frequency: 339.570MHz)
+   Minimum input arrival time before clock: 5.216ns
+   Maximum output required time after clock: 7.754ns
+   Maximum combinational path delay: 10.132ns
 
 Timing Details:
 ---------------
@@ -498,84 +453,91 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 2.481ns (frequency: 403.006MHz)
-  Total number of paths / destination ports: 112 / 62
+  Clock period: 2.945ns (frequency: 339.570MHz)
+  Total number of paths / destination ports: 1104 / 550
 -------------------------------------------------------------------------
-Delay:               2.481ns (Levels of Logic = 1)
-  Source:            memory_election (FF)
-  Destination:       Mram_contents_ram_general1 (RAM)
+Delay:               2.945ns (Levels of Logic = 2)
+  Source:            memory_election_1 (FF)
+  Destination:       contents_ram_specific_40_0 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: memory_election to Mram_contents_ram_general1
+  Data Path: memory_election_1 to contents_ram_specific_40_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              17   0.447   1.028  memory_election (memory_election)
-     LUT2:I1->O            8   0.205   0.802  write_en_memory_election_AND_1_o1 (write_en_memory_election_AND_1_o)
-     RAM256X1S:WE              0.000          Mram_contents_ram_general1
+     FD:C->Q              14   0.447   0.958  memory_election_1 (memory_election_1)
+     LUT6:I5->O           17   0.205   1.028  _n0915_inv11 (_n0915_inv1)
+     LUT6:I5->O            1   0.205   0.000  contents_ram_specific_49_0_rstpot (contents_ram_specific_49_0_rstpot)
+     FDC:D                     0.102          contents_ram_specific_49_0
     ----------------------------------------
-    Total                      2.481ns (0.652ns logic, 1.829ns route)
-                                       (26.3% logic, 73.7% route)
+    Total                      2.945ns (0.959ns logic, 1.986ns route)
+                                       (32.6% logic, 67.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 242 / 113
+  Total number of paths / destination ports: 4894 / 795
 -------------------------------------------------------------------------
-Offset:              5.067ns (Levels of Logic = 4)
-  Source:            address<2> (PAD)
-  Destination:       contents_ram_specific_49_0 (FF)
+Offset:              5.216ns (Levels of Logic = 2)
+  Source:            Reset (PAD)
+  Destination:       contents_ram_specific_41_0 (FF)
   Destination Clock: Clk rising
 
-  Data Path: address<2> to contents_ram_specific_49_0
+  Data Path: Reset to contents_ram_specific_41_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            17   1.222   1.275  address_2_IBUF (address_2_IBUF)
-     LUT4:I0->O            1   0.203   0.827  _n0193_inv_SW0 (N2)
-     LUT5:I1->O            8   0.203   1.031  _n0193_inv_rstpot (_n0193_inv_rstpot)
-     LUT3:I0->O            1   0.205   0.000  contents_ram_specific_49_0_dpot (contents_ram_specific_49_0_dpot)
-     FDCE:D                    0.102          contents_ram_specific_49_0
+     IBUF:I->O            33   1.222   1.305  Reset_IBUF (Reset_IBUF)
+     INV:I->O            200   0.206   2.053  Reset_inv251_INV_0 (Reset_inv)
+     FDC:CLR                   0.430          contents_ram_specific_41_0
     ----------------------------------------
-    Total                      5.067ns (1.935ns logic, 3.132ns route)
-                                       (38.2% logic, 61.8% route)
+    Total                      5.216ns (1.858ns logic, 3.358ns route)
+                                       (35.6% logic, 64.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 22 / 22
+  Total number of paths / destination ports: 542 / 30
 -------------------------------------------------------------------------
-Offset:              3.597ns (Levels of Logic = 1)
-  Source:            Switches_7 (FF)
-  Destination:       Switches<7> (PAD)
+Offset:              7.754ns (Levels of Logic = 5)
+  Source:            contents_ram_specific_26_7 (FF)
+  Destination:       databus<7> (PAD)
   Source Clock:      Clk rising
 
-  Data Path: Switches_7 to Switches<7>
+  Data Path: contents_ram_specific_26_7 to databus<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.447   0.579  Switches_7 (Switches_7)
-     OBUF:I->O                 2.571          Switches_7_OBUF (Switches<7>)
+     FD:C->Q               2   0.447   0.864  contents_ram_specific_26_7 (contents_ram_specific_26_7)
+     LUT6:I2->O            1   0.203   0.827  Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_122 (Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_122)
+     LUT6:I2->O            1   0.203   0.827  Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_7 (Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_7)
+     LUT6:I2->O            1   0.203   0.827  Mmux_Z_6_o_BUS_0010_MUX_83_o11 (Mmux_Z_6_o_BUS_0010_MUX_83_o1)
+     LUT4:I0->O            1   0.203   0.579  Mmux_Z_6_o_BUS_0010_MUX_83_o12 (databus_7_IOBUF)
+     IOBUF:I->IO               2.571          databus_7_IOBUF (databus<7>)
     ----------------------------------------
-    Total                      3.597ns (3.018ns logic, 0.579ns route)
-                                       (83.9% logic, 16.1% route)
+    Total                      7.754ns (3.830ns logic, 3.924ns route)
+                                       (49.4% logic, 50.6% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 352 / 8
 -------------------------------------------------------------------------
-Delay:               4.595ns (Levels of Logic = 2)
-  Source:            oe (PAD)
+Delay:               10.132ns (Levels of Logic = 6)
+  Source:            address<0> (PAD)
   Destination:       databus<7> (PAD)
 
-  Data Path: oe to databus<7>
+  Data Path: address<0> to databus<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             8   1.222   0.802  oe_IBUF (oe_IBUF)
-     IOBUF:T->IO               2.571          databus_7_IOBUF (databus<7>)
+     IBUF:I->O           648   1.222   2.467  address_0_IBUF (address_0_IBUF)
+     LUT6:I1->O            1   0.203   0.827  Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_122 (Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_122)
+     LUT6:I2->O            1   0.203   0.827  Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_7 (Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_7)
+     LUT6:I2->O            1   0.203   0.827  Mmux_Z_6_o_BUS_0010_MUX_83_o11 (Mmux_Z_6_o_BUS_0010_MUX_83_o1)
+     LUT4:I0->O            1   0.203   0.579  Mmux_Z_6_o_BUS_0010_MUX_83_o12 (databus_7_IOBUF)
+     IOBUF:I->IO               2.571          databus_7_IOBUF (databus<7>)
     ----------------------------------------
-    Total                      4.595ns (3.793ns logic, 0.802ns route)
-                                       (82.6% logic, 17.4% route)
+    Total                     10.132ns (4.605ns logic, 5.527ns route)
+                                       (45.5% logic, 54.5% route)
 
 =========================================================================
 
@@ -587,20 +549,20 @@ Clock to Setup on destination clock Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |    2.481|         |         |         |
+Clk            |    2.945|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.89 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.35 secs
  
 --> 
 
-Total memory usage is 257532 kilobytes
+Total memory usage is 294624 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  113 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

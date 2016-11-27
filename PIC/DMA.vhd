@@ -74,6 +74,14 @@ architecture Behavioral of DMA is
 	signal count : STD_LOGIC_VECTOR (1 downto 0);
 	
 begin
+	
+	-- Contador de bytes a transmitir o recibir
+BitCounter: data_counter
+    port map (
+      clk   => Clk,
+      reset => reset_counter,
+      enable => enable_counter,
+      count  => count);
 
 clock : process (Reset, Clk)
 begin
@@ -92,7 +100,6 @@ begin
 				next_state <= Wait_Buses;
 			elsif Send_comm = '1' then
 				next_state <= Tx;
-		--		READY <= not Send_comm;
 			else
 				next_state <= Idle;
 			end if;
@@ -124,12 +131,9 @@ begin
 end process;
 
 outputs : process (current_state, RCVD_Data, Databus, Send_comm, count)
-
---variable count: STD_LOGIC_VECTOR(1 downto 0) := "00";
-
 begin
-	Data_Read <= '0';    -- Revisar
-	Valid_D <= '0';      -- Revisar
+	Data_Read <= '0';    
+	Valid_D <= '0';      
 	Address <= (others => 'Z');
 	Databus <= (others => 'Z');
 	TX_Data <= (others => '0');
@@ -152,7 +156,6 @@ begin
 		when  Rx =>
 			Data_Read <= '1';
 			Write_en <= '1';
-			OE <= '1';
 			Databus <= RCVD_Data;
 			enable_counter <= '1';
 			reset_counter <= '0';
@@ -163,6 +166,7 @@ begin
 					Address <= DMA_RX_BUFFER_MID;
 				when "10" =>
 					Address <= DMA_RX_BUFFER_LSB;
+					DMA_RQ <= '1';
 				when others =>
 					enable_counter <= '0';
 			end case;
@@ -171,20 +175,23 @@ begin
 		
 		when Tx =>
 			Valid_D <= '1';
+			OE <= '0';
 			enable_counter <= '1';
 			reset_counter <= '0';			
 			case count is
 				when "00" =>
 					TX_Data <= Databus;
+					Address <= DMA_TX_BUFFER_MSB;
 				when "01" =>
 					TX_Data <= Databus;
+					Address <= DMA_TX_BUFFER_LSB;
 					READY <= '1';
 				when others =>
 					enable_counter <= '0';
 			end case;
 		when others =>
-			Data_Read <= '0';    -- Revisar
-			Valid_D <= '0';      -- Revisar
+			Data_Read <= '0';    
+			Valid_D <= '0';      
 			Address <= (others => 'Z');
 			Databus <= (others => 'Z');
 			TX_Data <= (others => '0');
@@ -197,12 +204,7 @@ begin
 	end case;
 end process;
 			
-BitCounter: data_counter
-    port map (
-      clk   => Clk,
-      reset => reset_counter,
-      enable => enable_counter,
-      count  => count);
+
 
 end Behavioral;
 

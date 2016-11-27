@@ -57,7 +57,8 @@ begin
 
 end process;
 
-databus <= contents_ram_general(conv_integer(address)) when oe = '0' else (others => 'Z');
+databus <= contents_ram_general(conv_integer(address)) when (oe = '0' and memory_election = '0')  else
+			  contents_ram_specific(conv_integer(address)) when (oe = '0' and memory_election = '1')  else (others => 'Z');
 -------------------------------------------------------------------------
 
 

@@ -112,10 +112,10 @@ BEGIN
 		oe <= 'Z', '0' after 325 ns, 'Z' after 600 ns;
 		
 		-- Variaciones de los datos y las direcciones
-		databus <= (others => 'Z'), "00000001" after 85 ns, "01010101" after 135 ns, "00010001" after 185 ns;
+		databus <= (others => 'Z'), "00000001" after 85 ns, "01010101" after 135 ns, "00010001" after 185 ns, (others => 'Z') after 240 ns;
 		address <= (others => 'Z'), DMA_RX_BUFFER_MSB after 85 ns, DMA_RX_BUFFER_MID after 135 ns, DMA_RX_BUFFER_LSB after 185 ns,
-						DMA_TX_BUFFER_MSB after 330 ns, DMA_TX_BUFFER_LSB after 380 ns, T_STAT after 430 ns, (others => 'Z') after 500 ns;
-
+						-- DMA_TX_BUFFER_MSB after 330 ns, DMA_TX_BUFFER_LSB after 380 ns, T_STAT after 430 ns, (others => 'Z') after 500 ns;
+						T_STAT after 300 ns, (others => 'Z') after 500 ns;
       wait;
    end process;
 

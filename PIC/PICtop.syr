@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.46 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.46 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: PICtop.prj
 
@@ -108,53 +108,928 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\ipcore_dir\fifo.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\ipcore_dir\fifo.vhd" into library work
 Parsing entity <fifo>.
 Parsing architecture <fifo_a> of entity <fifo>.
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\Pulse_width.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\Pulse_width.vhd" into library work
 Parsing entity <Pulse_width>.
 Parsing architecture <Behavioral> of entity <pulse_width>.
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\Data_Count.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\Data_Count.vhd" into library work
 Parsing entity <Data_Count>.
 Parsing architecture <Behavioral> of entity <data_count>.
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\ShiftRegister.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\ShiftRegister.vhd" into library work
 Parsing entity <ShiftRegister>.
 Parsing architecture <Behavioral> of entity <shiftregister>.
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\RS232_TX.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" into library work
 Parsing entity <RS232_TX>.
 Parsing architecture <Behavioral> of entity <rs232_tx>.
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\RS232_RX.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_RX.vhd" into library work
 Parsing entity <RS232_RX>.
 Parsing architecture <Behavioral> of entity <rs232_rx>.
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\RS232top.vhd" into library work
-Parsing entity <RS232top>.
-Parsing architecture <RTL> of entity <rs232top>.
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PIC_pkg.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\PIC_pkg.vhd" into library work
 Parsing package <PIC_pkg>.
 Parsing package body <PIC_pkg>.
-Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" into library work
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\data_counter.vhd" into library work
+Parsing entity <data_counter>.
+Parsing architecture <Behavioral> of entity <data_counter>.
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232top.vhd" into library work
+Parsing entity <RS232top>.
+Parsing architecture <RTL> of entity <rs232top>.
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RAM.vhd" into library work
+Parsing entity <ram>.
+Parsing architecture <behavior> of entity <ram>.
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\DMA.vhd" into library work
+Parsing entity <DMA>.
+Parsing architecture <Behavioral> of entity <dma>.
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\PICtop.vhd" into library work
 Parsing entity <PICtop>.
 Parsing architecture <behavior> of entity <pictop>.
-ERROR:HDLCompiler:69 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 44: <tx_data> is not declared.
-ERROR:HDLCompiler:69 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 45: <valid_d> is not declared.
-ERROR:HDLCompiler:69 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 46: <ack_out> is not declared.
-ERROR:HDLCompiler:192 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 46: Actual of formal out port ack_in cannot be an expression
-ERROR:HDLCompiler:69 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 47: <tx_rdy> is not declared.
-ERROR:HDLCompiler:192 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 47: Actual of formal out port tx_rdy cannot be an expression
-ERROR:HDLCompiler:69 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 50: <rcvd_data> is not declared.
-ERROR:HDLCompiler:192 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 50: Actual of formal out port data_out cannot be an expression
-ERROR:HDLCompiler:69 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 51: <data_read> is not declared.
-ERROR:HDLCompiler:69 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 52: <rx_full> is not declared.
-ERROR:HDLCompiler:192 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 52: Actual of formal out port full cannot be an expression
-ERROR:HDLCompiler:69 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 53: <rx_empty> is not declared.
-ERROR:HDLCompiler:192 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 53: Actual of formal out port empty cannot be an expression
-ERROR:HDLCompiler:854 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd" Line 20: Unit <behavior> ignored due to previous errors.
-VHDL file C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PICtop.vhd ignored due to errors
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <PICtop> (architecture <behavior>) from library <work>.
+
+Elaborating entity <RS232top> (architecture <RTL>) from library <work>.
+
+Elaborating entity <RS232_TX> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Pulse_width> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Data_Count> (architecture <Behavioral>) with generics from library <work>.
+INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" Line 130. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" Line 164. Case statement is complete. others clause is never selected
+
+Elaborating entity <RS232_RX> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Pulse_width> (architecture <Behavioral>) with generics from library <work>.
+INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_RX.vhd" Line 161. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_RX.vhd" Line 227. Case statement is complete. others clause is never selected
+
+Elaborating entity <ShiftRegister> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <fifo> (architecture <fifo_a>) from library <work>.
+
+Elaborating entity <DMA> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <data_counter> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\DMA.vhd" Line 192. Case statement is complete. others clause is never selected
+
+Elaborating entity <ram> (architecture <behavior>) from library <work>.
+WARNING:HDLCompiler:634 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\PICtop.vhd" Line 92: Net <DMA_ACK> does not have a driver.
+WARNING:HDLCompiler:634 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\PICtop.vhd" Line 94: Net <Send_comm> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <PICtop>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\PICtop.vhd".
+INFO:Xst:3210 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\PICtop.vhd" line 118: Output port <DMA_RQ> of the instance <DMA_Unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\PICtop.vhd" line 118: Output port <READY> of the instance <DMA_Unit> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <DMA_ACK> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <Send_comm> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <PICtop> synthesized.
+
+Synthesizing Unit <RS232top>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232top.vhd".
+    Found 1-bit register for signal <Ack_in>.
+    Found 1-bit register for signal <LineRD_in>.
+    Found 8-bit register for signal <Data_FF>.
+    Found 1-bit register for signal <StartTX>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <RS232top> synthesized.
+
+Synthesizing Unit <RS232_TX>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd".
+    Found 2-bit register for signal <PresentState>.
+    Found finite state machine <FSM_0> for signal <PresentState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit 9-to-1 multiplexer for signal <count[3]_PWR_9_o_Mux_7_o> created at line 149.
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <RS232_TX> synthesized.
+
+Synthesizing Unit <Pulse_width_1>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\Pulse_width.vhd".
+        PulseEndOfCount = 174
+    Found 1-bit register for signal <salida>.
+    Found 8-bit register for signal <cuenta>.
+    Found 8-bit adder for signal <cuenta[7]_GND_10_o_add_0_OUT> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Pulse_width_1> synthesized.
+
+Synthesizing Unit <Data_Count>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\Data_Count.vhd".
+        DataEndOfCount = 8
+    Found 4-bit register for signal <cuenta>.
+    Found 4-bit adder for signal <cuenta[3]_GND_11_o_add_1_OUT> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <Data_Count> synthesized.
+
+Synthesizing Unit <RS232_RX>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_RX.vhd".
+    Found 1-bit register for signal <enable_half>.
+    Found 2-bit register for signal <PresentState>.
+    Found finite state machine <FSM_1> for signal <PresentState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <RS232_RX> synthesized.
+
+Synthesizing Unit <Pulse_width_2>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\Pulse_width.vhd".
+        PulseEndOfCount = 87
+    Found 1-bit register for signal <salida>.
+    Found 8-bit register for signal <cuenta>.
+    Found 8-bit adder for signal <cuenta[7]_GND_13_o_add_0_OUT> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Pulse_width_2> synthesized.
+
+Synthesizing Unit <ShiftRegister>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\ShiftRegister.vhd".
+    Found 8-bit register for signal <salida>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <ShiftRegister> synthesized.
+
+Synthesizing Unit <DMA>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\DMA.vhd".
+WARNING:Xst:647 - Input <RX_Full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ACK_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <TX_RDY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <current_state>.
+INFO:Xst:1799 - State tx is never reached in FSM <current_state>.
+INFO:Xst:1799 - State rx is never reached in FSM <current_state>.
+    Found finite state machine <FSM_2> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4x6-bit Read Only RAM for signal <_n0105>
+    Found 1-bit 4-to-1 multiplexer for signal <enable_counter> created at line 147.
+    Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_count[1]_Mux_27_o> created at line 147.
+    Found 1-bit tristate buffer for signal <Address<7>> created at line 133
+    Found 1-bit tristate buffer for signal <Address<6>> created at line 133
+    Found 1-bit tristate buffer for signal <Address<5>> created at line 133
+    Found 1-bit tristate buffer for signal <Address<4>> created at line 133
+    Found 1-bit tristate buffer for signal <Address<3>> created at line 133
+    Found 1-bit tristate buffer for signal <Address<2>> created at line 133
+    Found 1-bit tristate buffer for signal <Address<1>> created at line 133
+    Found 1-bit tristate buffer for signal <Address<0>> created at line 133
+    Found 1-bit tristate buffer for signal <Databus<7>> created at line 133
+    Found 1-bit tristate buffer for signal <Databus<6>> created at line 133
+    Found 1-bit tristate buffer for signal <Databus<5>> created at line 133
+    Found 1-bit tristate buffer for signal <Databus<4>> created at line 133
+    Found 1-bit tristate buffer for signal <Databus<3>> created at line 133
+    Found 1-bit tristate buffer for signal <Databus<2>> created at line 133
+    Found 1-bit tristate buffer for signal <Databus<1>> created at line 133
+    Found 1-bit tristate buffer for signal <Databus<0>> created at line 133
+    Found 1-bit tristate buffer for signal <Write_en> created at line 133
+    Found 1-bit tristate buffer for signal <OE> created at line 133
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Multiplexer(s).
+	inferred  18 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <DMA> synthesized.
+
+Synthesizing Unit <data_counter>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\data_counter.vhd".
+WARNING:Xst:647 - Input <enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <cuenta>.
+    Found 2-bit adder for signal <cuenta[1]_GND_19_o_add_1_OUT> created at line 56.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <data_counter> synthesized.
+
+Synthesizing Unit <ram>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RAM.vhd".
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <contents_ram_general>, simulation mismatch.
+    Found 192x8-bit single-port RAM <Mram_contents_ram_general> for signal <contents_ram_general>.
+    Found 8-bit register for signal <contents_ram_specific<41>>.
+    Found 8-bit register for signal <contents_ram_specific<40>>.
+    Found 8-bit register for signal <contents_ram_specific<39>>.
+    Found 8-bit register for signal <contents_ram_specific<38>>.
+    Found 8-bit register for signal <contents_ram_specific<37>>.
+    Found 8-bit register for signal <contents_ram_specific<36>>.
+    Found 8-bit register for signal <contents_ram_specific<35>>.
+    Found 8-bit register for signal <contents_ram_specific<34>>.
+    Found 8-bit register for signal <contents_ram_specific<33>>.
+    Found 8-bit register for signal <contents_ram_specific<32>>.
+    Found 8-bit register for signal <contents_ram_specific<23>>.
+    Found 8-bit register for signal <contents_ram_specific<22>>.
+    Found 8-bit register for signal <contents_ram_specific<21>>.
+    Found 8-bit register for signal <contents_ram_specific<20>>.
+    Found 8-bit register for signal <contents_ram_specific<19>>.
+    Found 8-bit register for signal <contents_ram_specific<18>>.
+    Found 8-bit register for signal <contents_ram_specific<17>>.
+    Found 8-bit register for signal <contents_ram_specific<16>>.
+    Found 8-bit register for signal <contents_ram_specific<5>>.
+    Found 8-bit register for signal <contents_ram_specific<4>>.
+    Found 8-bit register for signal <contents_ram_specific<3>>.
+    Found 8-bit register for signal <contents_ram_specific<2>>.
+    Found 8-bit register for signal <contents_ram_specific<1>>.
+    Found 8-bit register for signal <contents_ram_specific<0>>.
+    Found 8-bit register for signal <contents_ram_specific<49>>.
+    Found 8-bit register for signal <contents_ram_specific<63>>.
+    Found 8-bit register for signal <contents_ram_specific<62>>.
+    Found 8-bit register for signal <contents_ram_specific<61>>.
+    Found 8-bit register for signal <contents_ram_specific<60>>.
+    Found 8-bit register for signal <contents_ram_specific<59>>.
+    Found 8-bit register for signal <contents_ram_specific<58>>.
+    Found 8-bit register for signal <contents_ram_specific<57>>.
+    Found 8-bit register for signal <contents_ram_specific<56>>.
+    Found 8-bit register for signal <contents_ram_specific<55>>.
+    Found 8-bit register for signal <contents_ram_specific<54>>.
+    Found 8-bit register for signal <contents_ram_specific<53>>.
+    Found 8-bit register for signal <contents_ram_specific<52>>.
+    Found 8-bit register for signal <contents_ram_specific<51>>.
+    Found 8-bit register for signal <contents_ram_specific<50>>.
+    Found 8-bit register for signal <contents_ram_specific<48>>.
+    Found 8-bit register for signal <contents_ram_specific<47>>.
+    Found 8-bit register for signal <contents_ram_specific<46>>.
+    Found 8-bit register for signal <contents_ram_specific<45>>.
+    Found 8-bit register for signal <contents_ram_specific<44>>.
+    Found 8-bit register for signal <contents_ram_specific<43>>.
+    Found 8-bit register for signal <contents_ram_specific<42>>.
+    Found 8-bit register for signal <contents_ram_specific<31>>.
+    Found 8-bit register for signal <contents_ram_specific<30>>.
+    Found 8-bit register for signal <contents_ram_specific<29>>.
+    Found 8-bit register for signal <contents_ram_specific<28>>.
+    Found 8-bit register for signal <contents_ram_specific<27>>.
+    Found 8-bit register for signal <contents_ram_specific<26>>.
+    Found 8-bit register for signal <contents_ram_specific<25>>.
+    Found 8-bit register for signal <contents_ram_specific<24>>.
+    Found 8-bit register for signal <contents_ram_specific<15>>.
+    Found 8-bit register for signal <contents_ram_specific<14>>.
+    Found 8-bit register for signal <contents_ram_specific<13>>.
+    Found 8-bit register for signal <contents_ram_specific<12>>.
+    Found 8-bit register for signal <contents_ram_specific<11>>.
+    Found 8-bit register for signal <contents_ram_specific<10>>.
+    Found 8-bit register for signal <contents_ram_specific<9>>.
+    Found 8-bit register for signal <contents_ram_specific<8>>.
+    Found 8-bit register for signal <contents_ram_specific<7>>.
+    Found 8-bit register for signal <contents_ram_specific<6>>.
+    Found 7-bit register for signal <Temp_H>.
+    Found 7-bit register for signal <Temp_L>.
+    Found 8-bit register for signal <valor_Switch>.
+    Found 8-bit register for signal <Switches>.
+    Found 1-bit register for signal <memory_election>.
+    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][7]_PWR_54_o_wide_mux_303_OUT>
+    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][3]_PWR_54_o_wide_mux_304_OUT>
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<6>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<5>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<4>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<3>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<2>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<1>> created at line 60.
+    Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<0>> created at line 60.
+    Found 1-bit tristate buffer for signal <databus<7>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<6>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<5>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<4>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<3>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<2>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<1>> created at line 60
+    Found 1-bit tristate buffer for signal <databus<0>> created at line 60
+    Found 8-bit comparator greater for signal <GND_38_o_address[7]_LessThan_1_o> created at line 37
+    Found 8-bit comparator greater for signal <address[7]_GND_38_o_LessThan_2_o> created at line 39
+    Summary:
+	inferred   3 RAM(s).
+	inferred 543 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  16 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <ram> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x7-bit single-port Read Only RAM                    : 2
+ 192x8-bit single-port RAM                             : 1
+ 4x6-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 6
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 2
+ 8-bit adder                                           : 3
+# Registers                                            : 84
+ 1-bit register                                        : 8
+ 2-bit register                                        : 1
+ 4-bit register                                        : 2
+ 7-bit register                                        : 2
+ 8-bit register                                        : 71
+# Comparators                                          : 2
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 29
+ 1-bit 2-to-1 multiplexer                              : 15
+ 1-bit 4-to-1 multiplexer                              : 2
+ 1-bit 64-to-1 multiplexer                             : 8
+ 1-bit 9-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+# Tristates                                            : 26
+ 1-bit tristate buffer                                 : 26
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fifo.ngc>.
+Loading core <fifo> for timing and area information for instance <Internal_memory>.
+WARNING:Xst:1710 - FF/Latch <Data_FF_0> (without init value) has a constant value of 0 in block <RS232_PHY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_FF_1> (without init value) has a constant value of 0 in block <RS232_PHY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_FF_2> (without init value) has a constant value of 0 in block <RS232_PHY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_FF_3> (without init value) has a constant value of 0 in block <RS232_PHY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_FF_4> (without init value) has a constant value of 0 in block <RS232_PHY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_FF_5> (without init value) has a constant value of 0 in block <RS232_PHY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_FF_6> (without init value) has a constant value of 0 in block <RS232_PHY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_FF_7> (without init value) has a constant value of 0 in block <RS232_PHY>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <DMA>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0105> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 6-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <DMA> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Data_Count>.
+The following registers are absorbed into counter <cuenta>: 1 register on signal <cuenta>.
+Unit <Data_Count> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Pulse_width_1>.
+The following registers are absorbed into counter <cuenta>: 1 register on signal <cuenta>.
+Unit <Pulse_width_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Pulse_width_2>.
+The following registers are absorbed into counter <cuenta>: 1 register on signal <cuenta>.
+Unit <Pulse_width_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <data_counter>.
+The following registers are absorbed into counter <cuenta>: 1 register on signal <cuenta>.
+Unit <data_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ram>.
+INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][7]_PWR_54_o_wide_mux_303_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <contents_ram_specific<49><7:4>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][3]_PWR_54_o_wide_mux_304_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <contents_ram_specific<49><3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_contents_ram_general> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 192-word x 8-bit                    |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <databus>       |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ram> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x7-bit single-port distributed Read Only RAM        : 2
+ 192x8-bit single-port distributed RAM                 : 1
+ 4x6-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 6
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 8-bit up counter                                      : 3
+# Registers                                            : 566
+ Flip-Flops                                            : 566
+# Comparators                                          : 2
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 17
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 4-to-1 multiplexer                              : 2
+ 1-bit 64-to-1 multiplexer                             : 8
+ 1-bit 9-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <RS232_PHY/Transmitter/FSM_0> on signal <PresentState[1:2]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 00
+ startbit | 01
+ senddata | 11
+ stopbit  | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <RS232_PHY/Receiver/FSM_1> on signal <PresentState[1:2]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 00
+ startbit | 01
+ rcvdata  | 11
+ stopbit  | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <DMA_Unit/FSM_2> on signal <current_state[1:1]> with sequential encoding.
+------------------------
+ State      | Encoding
+------------------------
+ idle       | 0
+ tx         | unreached
+ wait_buses | 1
+ rx         | unreached
+------------------------
+WARNING:Xst:2042 - Unit ram: 8 internal tristates are replaced by logic (pull-up yes): databus<0>, databus<1>, databus<2>, databus<3>, databus<4>, databus<5>, databus<6>, databus<7>.
+WARNING:Xst:2042 - Unit DMA: 18 internal tristates are replaced by logic (pull-up yes): Address<0>, Address<1>, Address<2>, Address<3>, Address<4>, Address<5>, Address<6>, Address<7>, Databus<0>, Databus<1>, Databus<2>, Databus<3>, Databus<4>, Databus<5>, Databus<6>, Databus<7>, OE, Write_en.
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_49_0> in Unit <PICtop> is equivalent to the following 14 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_1_0> <RAM_Unit/contents_ram_specific_0_0> <RAM_Unit/contents_ram_specific_4_0> <RAM_Unit/contents_ram_specific_5_0> <RAM_Unit/contents_ram_specific_17_0> <RAM_Unit/contents_ram_specific_16_0> <RAM_Unit/contents_ram_specific_20_0> <RAM_Unit/contents_ram_specific_21_0> <RAM_Unit/contents_ram_specific_33_0> <RAM_Unit/contents_ram_specific_32_0> <RAM_Unit/contents_ram_specific_36_0> <RAM_Unit/contents_ram_specific_37_0> <RAM_Unit/contents_ram_specific_40_0> <RAM_Unit/contents_ram_specific_41_0> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_49_1> in Unit <PICtop> is equivalent to the following 14 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_1_1> <RAM_Unit/contents_ram_specific_0_1> <RAM_Unit/contents_ram_specific_4_1> <RAM_Unit/contents_ram_specific_5_1> <RAM_Unit/contents_ram_specific_17_1> <RAM_Unit/contents_ram_specific_16_1> <RAM_Unit/contents_ram_specific_20_1> <RAM_Unit/contents_ram_specific_21_1> <RAM_Unit/contents_ram_specific_33_1> <RAM_Unit/contents_ram_specific_32_1> <RAM_Unit/contents_ram_specific_36_1> <RAM_Unit/contents_ram_specific_37_1> <RAM_Unit/contents_ram_specific_40_1> <RAM_Unit/contents_ram_specific_41_1> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_49_2> in Unit <PICtop> is equivalent to the following 14 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_1_2> <RAM_Unit/contents_ram_specific_0_2> <RAM_Unit/contents_ram_specific_4_2> <RAM_Unit/contents_ram_specific_5_2> <RAM_Unit/contents_ram_specific_17_2> <RAM_Unit/contents_ram_specific_16_2> <RAM_Unit/contents_ram_specific_20_2> <RAM_Unit/contents_ram_specific_21_2> <RAM_Unit/contents_ram_specific_33_2> <RAM_Unit/contents_ram_specific_32_2> <RAM_Unit/contents_ram_specific_36_2> <RAM_Unit/contents_ram_specific_37_2> <RAM_Unit/contents_ram_specific_40_2> <RAM_Unit/contents_ram_specific_41_2> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_49_3> in Unit <PICtop> is equivalent to the following 14 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_1_3> <RAM_Unit/contents_ram_specific_0_3> <RAM_Unit/contents_ram_specific_4_3> <RAM_Unit/contents_ram_specific_5_3> <RAM_Unit/contents_ram_specific_17_3> <RAM_Unit/contents_ram_specific_16_3> <RAM_Unit/contents_ram_specific_20_3> <RAM_Unit/contents_ram_specific_21_3> <RAM_Unit/contents_ram_specific_33_3> <RAM_Unit/contents_ram_specific_32_3> <RAM_Unit/contents_ram_specific_36_3> <RAM_Unit/contents_ram_specific_37_3> <RAM_Unit/contents_ram_specific_40_3> <RAM_Unit/contents_ram_specific_41_3> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_49_4> in Unit <PICtop> is equivalent to the following 14 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_1_4> <RAM_Unit/contents_ram_specific_0_4> <RAM_Unit/contents_ram_specific_4_4> <RAM_Unit/contents_ram_specific_5_4> <RAM_Unit/contents_ram_specific_17_4> <RAM_Unit/contents_ram_specific_16_4> <RAM_Unit/contents_ram_specific_20_4> <RAM_Unit/contents_ram_specific_21_4> <RAM_Unit/contents_ram_specific_33_4> <RAM_Unit/contents_ram_specific_32_4> <RAM_Unit/contents_ram_specific_36_4> <RAM_Unit/contents_ram_specific_37_4> <RAM_Unit/contents_ram_specific_40_4> <RAM_Unit/contents_ram_specific_41_4> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_1_5> in Unit <PICtop> is equivalent to the following 13 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_0_5> <RAM_Unit/contents_ram_specific_4_5> <RAM_Unit/contents_ram_specific_5_5> <RAM_Unit/contents_ram_specific_17_5> <RAM_Unit/contents_ram_specific_16_5> <RAM_Unit/contents_ram_specific_20_5> <RAM_Unit/contents_ram_specific_21_5> <RAM_Unit/contents_ram_specific_33_5> <RAM_Unit/contents_ram_specific_32_5> <RAM_Unit/contents_ram_specific_36_5> <RAM_Unit/contents_ram_specific_37_5> <RAM_Unit/contents_ram_specific_40_5> <RAM_Unit/contents_ram_specific_41_5> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_49_6> in Unit <PICtop> is equivalent to the following 14 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_1_6> <RAM_Unit/contents_ram_specific_0_6> <RAM_Unit/contents_ram_specific_4_6> <RAM_Unit/contents_ram_specific_5_6> <RAM_Unit/contents_ram_specific_17_6> <RAM_Unit/contents_ram_specific_16_6> <RAM_Unit/contents_ram_specific_20_6> <RAM_Unit/contents_ram_specific_21_6> <RAM_Unit/contents_ram_specific_33_6> <RAM_Unit/contents_ram_specific_32_6> <RAM_Unit/contents_ram_specific_36_6> <RAM_Unit/contents_ram_specific_37_6> <RAM_Unit/contents_ram_specific_40_6> <RAM_Unit/contents_ram_specific_41_6> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_49_7> in Unit <PICtop> is equivalent to the following 14 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_1_7> <RAM_Unit/contents_ram_specific_0_7> <RAM_Unit/contents_ram_specific_4_7> <RAM_Unit/contents_ram_specific_5_7> <RAM_Unit/contents_ram_specific_17_7> <RAM_Unit/contents_ram_specific_16_7> <RAM_Unit/contents_ram_specific_20_7> <RAM_Unit/contents_ram_specific_21_7> <RAM_Unit/contents_ram_specific_33_7> <RAM_Unit/contents_ram_specific_32_7> <RAM_Unit/contents_ram_specific_36_7> <RAM_Unit/contents_ram_specific_37_7> <RAM_Unit/contents_ram_specific_40_7> <RAM_Unit/contents_ram_specific_41_7> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_8_0> in Unit <PICtop> is equivalent to the following 16 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_9_0> <RAM_Unit/contents_ram_specific_13_0> <RAM_Unit/contents_ram_specific_12_0> <RAM_Unit/contents_ram_specific_24_0> <RAM_Unit/contents_ram_specific_25_0> <RAM_Unit/contents_ram_specific_28_0> <RAM_Unit/contents_ram_specific_29_0> <RAM_Unit/contents_ram_specific_44_0> <RAM_Unit/contents_ram_specific_45_0> <RAM_Unit/contents_ram_specific_48_0> <RAM_Unit/contents_ram_specific_52_0> <RAM_Unit/contents_ram_specific_53_0> <RAM_Unit/contents_ram_specific_56_0> <RAM_Unit/contents_ram_specific_57_0> <RAM_Unit/contents_ram_specific_61_0> <RAM_Unit/contents_ram_specific_60_0> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_8_1> in Unit <PICtop> is equivalent to the following 16 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_9_1> <RAM_Unit/contents_ram_specific_13_1> <RAM_Unit/contents_ram_specific_12_1> <RAM_Unit/contents_ram_specific_24_1> <RAM_Unit/contents_ram_specific_25_1> <RAM_Unit/contents_ram_specific_28_1> <RAM_Unit/contents_ram_specific_29_1> <RAM_Unit/contents_ram_specific_44_1> <RAM_Unit/contents_ram_specific_45_1> <RAM_Unit/contents_ram_specific_48_1> <RAM_Unit/contents_ram_specific_52_1> <RAM_Unit/contents_ram_specific_53_1> <RAM_Unit/contents_ram_specific_56_1> <RAM_Unit/contents_ram_specific_57_1> <RAM_Unit/contents_ram_specific_61_1> <RAM_Unit/contents_ram_specific_60_1> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_8_2> in Unit <PICtop> is equivalent to the following 16 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_9_2> <RAM_Unit/contents_ram_specific_13_2> <RAM_Unit/contents_ram_specific_12_2> <RAM_Unit/contents_ram_specific_24_2> <RAM_Unit/contents_ram_specific_25_2> <RAM_Unit/contents_ram_specific_28_2> <RAM_Unit/contents_ram_specific_29_2> <RAM_Unit/contents_ram_specific_44_2> <RAM_Unit/contents_ram_specific_45_2> <RAM_Unit/contents_ram_specific_48_2> <RAM_Unit/contents_ram_specific_52_2> <RAM_Unit/contents_ram_specific_53_2> <RAM_Unit/contents_ram_specific_56_2> <RAM_Unit/contents_ram_specific_57_2> <RAM_Unit/contents_ram_specific_61_2> <RAM_Unit/contents_ram_specific_60_2> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_8_3> in Unit <PICtop> is equivalent to the following 16 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_9_3> <RAM_Unit/contents_ram_specific_13_3> <RAM_Unit/contents_ram_specific_12_3> <RAM_Unit/contents_ram_specific_24_3> <RAM_Unit/contents_ram_specific_25_3> <RAM_Unit/contents_ram_specific_28_3> <RAM_Unit/contents_ram_specific_29_3> <RAM_Unit/contents_ram_specific_44_3> <RAM_Unit/contents_ram_specific_45_3> <RAM_Unit/contents_ram_specific_48_3> <RAM_Unit/contents_ram_specific_52_3> <RAM_Unit/contents_ram_specific_53_3> <RAM_Unit/contents_ram_specific_56_3> <RAM_Unit/contents_ram_specific_57_3> <RAM_Unit/contents_ram_specific_61_3> <RAM_Unit/contents_ram_specific_60_3> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_8_4> in Unit <PICtop> is equivalent to the following 16 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_9_4> <RAM_Unit/contents_ram_specific_13_4> <RAM_Unit/contents_ram_specific_12_4> <RAM_Unit/contents_ram_specific_24_4> <RAM_Unit/contents_ram_specific_25_4> <RAM_Unit/contents_ram_specific_28_4> <RAM_Unit/contents_ram_specific_29_4> <RAM_Unit/contents_ram_specific_44_4> <RAM_Unit/contents_ram_specific_45_4> <RAM_Unit/contents_ram_specific_48_4> <RAM_Unit/contents_ram_specific_52_4> <RAM_Unit/contents_ram_specific_53_4> <RAM_Unit/contents_ram_specific_56_4> <RAM_Unit/contents_ram_specific_57_4> <RAM_Unit/contents_ram_specific_61_4> <RAM_Unit/contents_ram_specific_60_4> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_8_5> in Unit <PICtop> is equivalent to the following 16 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_9_5> <RAM_Unit/contents_ram_specific_13_5> <RAM_Unit/contents_ram_specific_12_5> <RAM_Unit/contents_ram_specific_24_5> <RAM_Unit/contents_ram_specific_25_5> <RAM_Unit/contents_ram_specific_28_5> <RAM_Unit/contents_ram_specific_29_5> <RAM_Unit/contents_ram_specific_44_5> <RAM_Unit/contents_ram_specific_45_5> <RAM_Unit/contents_ram_specific_48_5> <RAM_Unit/contents_ram_specific_52_5> <RAM_Unit/contents_ram_specific_53_5> <RAM_Unit/contents_ram_specific_56_5> <RAM_Unit/contents_ram_specific_57_5> <RAM_Unit/contents_ram_specific_61_5> <RAM_Unit/contents_ram_specific_60_5> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_8_6> in Unit <PICtop> is equivalent to the following 16 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_9_6> <RAM_Unit/contents_ram_specific_13_6> <RAM_Unit/contents_ram_specific_12_6> <RAM_Unit/contents_ram_specific_24_6> <RAM_Unit/contents_ram_specific_25_6> <RAM_Unit/contents_ram_specific_28_6> <RAM_Unit/contents_ram_specific_29_6> <RAM_Unit/contents_ram_specific_44_6> <RAM_Unit/contents_ram_specific_45_6> <RAM_Unit/contents_ram_specific_48_6> <RAM_Unit/contents_ram_specific_52_6> <RAM_Unit/contents_ram_specific_53_6> <RAM_Unit/contents_ram_specific_56_6> <RAM_Unit/contents_ram_specific_57_6> <RAM_Unit/contents_ram_specific_61_6> <RAM_Unit/contents_ram_specific_60_6> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_8_7> in Unit <PICtop> is equivalent to the following 16 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_9_7> <RAM_Unit/contents_ram_specific_13_7> <RAM_Unit/contents_ram_specific_12_7> <RAM_Unit/contents_ram_specific_24_7> <RAM_Unit/contents_ram_specific_25_7> <RAM_Unit/contents_ram_specific_28_7> <RAM_Unit/contents_ram_specific_29_7> <RAM_Unit/contents_ram_specific_44_7> <RAM_Unit/contents_ram_specific_45_7> <RAM_Unit/contents_ram_specific_48_7> <RAM_Unit/contents_ram_specific_52_7> <RAM_Unit/contents_ram_specific_53_7> <RAM_Unit/contents_ram_specific_56_7> <RAM_Unit/contents_ram_specific_57_7> <RAM_Unit/contents_ram_specific_61_7> <RAM_Unit/contents_ram_specific_60_7> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/valor_Switch_5> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/valor_Switch_4> <RAM_Unit/valor_Switch_1> <RAM_Unit/valor_Switch_0> 
+WARNING:Xst:2677 - Node <DMA_Unit/BitCounter/cuenta_1> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <DMA_Unit/BitCounter/cuenta_0> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <DMA_Unit/current_state_FSM_FFd1> of sequential type is unconnected in block <PICtop>.
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/Switches_5> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/Switches_4> <RAM_Unit/Switches_1> <RAM_Unit/Switches_0> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_2_0> in Unit <PICtop> is equivalent to the following 7 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_3_0> <RAM_Unit/contents_ram_specific_18_0> <RAM_Unit/contents_ram_specific_19_0> <RAM_Unit/contents_ram_specific_22_0> <RAM_Unit/contents_ram_specific_34_0> <RAM_Unit/contents_ram_specific_35_0> <RAM_Unit/contents_ram_specific_38_0> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_2_1> in Unit <PICtop> is equivalent to the following 7 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_3_1> <RAM_Unit/contents_ram_specific_18_1> <RAM_Unit/contents_ram_specific_19_1> <RAM_Unit/contents_ram_specific_22_1> <RAM_Unit/contents_ram_specific_34_1> <RAM_Unit/contents_ram_specific_35_1> <RAM_Unit/contents_ram_specific_38_1> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_2_2> in Unit <PICtop> is equivalent to the following 7 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_3_2> <RAM_Unit/contents_ram_specific_18_2> <RAM_Unit/contents_ram_specific_19_2> <RAM_Unit/contents_ram_specific_22_2> <RAM_Unit/contents_ram_specific_34_2> <RAM_Unit/contents_ram_specific_35_2> <RAM_Unit/contents_ram_specific_38_2> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_15_0> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_31_0> <RAM_Unit/contents_ram_specific_47_0> <RAM_Unit/contents_ram_specific_55_0> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_2_3> in Unit <PICtop> is equivalent to the following 7 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_3_3> <RAM_Unit/contents_ram_specific_18_3> <RAM_Unit/contents_ram_specific_19_3> <RAM_Unit/contents_ram_specific_22_3> <RAM_Unit/contents_ram_specific_34_3> <RAM_Unit/contents_ram_specific_35_3> <RAM_Unit/contents_ram_specific_38_3> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_15_1> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_31_1> <RAM_Unit/contents_ram_specific_47_1> <RAM_Unit/contents_ram_specific_55_1> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_2_4> in Unit <PICtop> is equivalent to the following 7 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_3_4> <RAM_Unit/contents_ram_specific_18_4> <RAM_Unit/contents_ram_specific_19_4> <RAM_Unit/contents_ram_specific_22_4> <RAM_Unit/contents_ram_specific_34_4> <RAM_Unit/contents_ram_specific_35_4> <RAM_Unit/contents_ram_specific_38_4> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_15_2> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_31_2> <RAM_Unit/contents_ram_specific_47_2> <RAM_Unit/contents_ram_specific_55_2> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_2_5> in Unit <PICtop> is equivalent to the following 7 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_3_5> <RAM_Unit/contents_ram_specific_18_5> <RAM_Unit/contents_ram_specific_19_5> <RAM_Unit/contents_ram_specific_22_5> <RAM_Unit/contents_ram_specific_34_5> <RAM_Unit/contents_ram_specific_35_5> <RAM_Unit/contents_ram_specific_38_5> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_15_3> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_31_3> <RAM_Unit/contents_ram_specific_47_3> <RAM_Unit/contents_ram_specific_55_3> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_2_6> in Unit <PICtop> is equivalent to the following 7 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_3_6> <RAM_Unit/contents_ram_specific_18_6> <RAM_Unit/contents_ram_specific_19_6> <RAM_Unit/contents_ram_specific_22_6> <RAM_Unit/contents_ram_specific_34_6> <RAM_Unit/contents_ram_specific_35_6> <RAM_Unit/contents_ram_specific_38_6> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_15_4> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_31_4> <RAM_Unit/contents_ram_specific_47_4> <RAM_Unit/contents_ram_specific_55_4> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_2_7> in Unit <PICtop> is equivalent to the following 7 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_3_7> <RAM_Unit/contents_ram_specific_18_7> <RAM_Unit/contents_ram_specific_19_7> <RAM_Unit/contents_ram_specific_22_7> <RAM_Unit/contents_ram_specific_34_7> <RAM_Unit/contents_ram_specific_35_7> <RAM_Unit/contents_ram_specific_38_7> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_15_5> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_31_5> <RAM_Unit/contents_ram_specific_47_5> <RAM_Unit/contents_ram_specific_55_5> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_15_6> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_31_6> <RAM_Unit/contents_ram_specific_47_6> <RAM_Unit/contents_ram_specific_55_6> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_6_0> in Unit <PICtop> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_10_0> <RAM_Unit/contents_ram_specific_11_0> <RAM_Unit/contents_ram_specific_14_0> <RAM_Unit/contents_ram_specific_27_0> <RAM_Unit/contents_ram_specific_26_0> <RAM_Unit/contents_ram_specific_30_0> <RAM_Unit/contents_ram_specific_43_0> <RAM_Unit/contents_ram_specific_42_0> <RAM_Unit/contents_ram_specific_46_0> <RAM_Unit/contents_ram_specific_50_0> <RAM_Unit/contents_ram_specific_51_0> <RAM_Unit/contents_ram_specific_54_0> <RAM_Unit/contents_ram_specific_58_0> <RAM_Unit/contents_ram_specific_59_0> <RAM_Unit/contents_ram_specific_62_0> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_15_7> in Unit <PICtop> is equivalent to the following 3 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_31_7> <RAM_Unit/contents_ram_specific_47_7> <RAM_Unit/contents_ram_specific_55_7> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_6_1> in Unit <PICtop> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_10_1> <RAM_Unit/contents_ram_specific_11_1> <RAM_Unit/contents_ram_specific_14_1> <RAM_Unit/contents_ram_specific_27_1> <RAM_Unit/contents_ram_specific_26_1> <RAM_Unit/contents_ram_specific_30_1> <RAM_Unit/contents_ram_specific_43_1> <RAM_Unit/contents_ram_specific_42_1> <RAM_Unit/contents_ram_specific_46_1> <RAM_Unit/contents_ram_specific_50_1> <RAM_Unit/contents_ram_specific_51_1> <RAM_Unit/contents_ram_specific_54_1> <RAM_Unit/contents_ram_specific_58_1> <RAM_Unit/contents_ram_specific_59_1> <RAM_Unit/contents_ram_specific_62_1> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_6_2> in Unit <PICtop> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_10_2> <RAM_Unit/contents_ram_specific_11_2> <RAM_Unit/contents_ram_specific_14_2> <RAM_Unit/contents_ram_specific_27_2> <RAM_Unit/contents_ram_specific_26_2> <RAM_Unit/contents_ram_specific_30_2> <RAM_Unit/contents_ram_specific_43_2> <RAM_Unit/contents_ram_specific_42_2> <RAM_Unit/contents_ram_specific_46_2> <RAM_Unit/contents_ram_specific_50_2> <RAM_Unit/contents_ram_specific_51_2> <RAM_Unit/contents_ram_specific_54_2> <RAM_Unit/contents_ram_specific_58_2> <RAM_Unit/contents_ram_specific_59_2> <RAM_Unit/contents_ram_specific_62_2> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_6_3> in Unit <PICtop> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_10_3> <RAM_Unit/contents_ram_specific_11_3> <RAM_Unit/contents_ram_specific_14_3> <RAM_Unit/contents_ram_specific_27_3> <RAM_Unit/contents_ram_specific_26_3> <RAM_Unit/contents_ram_specific_30_3> <RAM_Unit/contents_ram_specific_43_3> <RAM_Unit/contents_ram_specific_42_3> <RAM_Unit/contents_ram_specific_46_3> <RAM_Unit/contents_ram_specific_50_3> <RAM_Unit/contents_ram_specific_51_3> <RAM_Unit/contents_ram_specific_54_3> <RAM_Unit/contents_ram_specific_58_3> <RAM_Unit/contents_ram_specific_59_3> <RAM_Unit/contents_ram_specific_62_3> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_6_4> in Unit <PICtop> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_10_4> <RAM_Unit/contents_ram_specific_11_4> <RAM_Unit/contents_ram_specific_14_4> <RAM_Unit/contents_ram_specific_27_4> <RAM_Unit/contents_ram_specific_26_4> <RAM_Unit/contents_ram_specific_30_4> <RAM_Unit/contents_ram_specific_43_4> <RAM_Unit/contents_ram_specific_42_4> <RAM_Unit/contents_ram_specific_46_4> <RAM_Unit/contents_ram_specific_50_4> <RAM_Unit/contents_ram_specific_51_4> <RAM_Unit/contents_ram_specific_54_4> <RAM_Unit/contents_ram_specific_58_4> <RAM_Unit/contents_ram_specific_59_4> <RAM_Unit/contents_ram_specific_62_4> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_6_5> in Unit <PICtop> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_10_5> <RAM_Unit/contents_ram_specific_11_5> <RAM_Unit/contents_ram_specific_14_5> <RAM_Unit/contents_ram_specific_27_5> <RAM_Unit/contents_ram_specific_26_5> <RAM_Unit/contents_ram_specific_30_5> <RAM_Unit/contents_ram_specific_43_5> <RAM_Unit/contents_ram_specific_42_5> <RAM_Unit/contents_ram_specific_46_5> <RAM_Unit/contents_ram_specific_50_5> <RAM_Unit/contents_ram_specific_51_5> <RAM_Unit/contents_ram_specific_54_5> <RAM_Unit/contents_ram_specific_58_5> <RAM_Unit/contents_ram_specific_59_5> <RAM_Unit/contents_ram_specific_62_5> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_6_6> in Unit <PICtop> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_10_6> <RAM_Unit/contents_ram_specific_11_6> <RAM_Unit/contents_ram_specific_14_6> <RAM_Unit/contents_ram_specific_27_6> <RAM_Unit/contents_ram_specific_26_6> <RAM_Unit/contents_ram_specific_30_6> <RAM_Unit/contents_ram_specific_43_6> <RAM_Unit/contents_ram_specific_42_6> <RAM_Unit/contents_ram_specific_46_6> <RAM_Unit/contents_ram_specific_50_6> <RAM_Unit/contents_ram_specific_51_6> <RAM_Unit/contents_ram_specific_54_6> <RAM_Unit/contents_ram_specific_58_6> <RAM_Unit/contents_ram_specific_59_6> <RAM_Unit/contents_ram_specific_62_6> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_6_7> in Unit <PICtop> is equivalent to the following 15 FFs/Latches, which will be removed : <RAM_Unit/contents_ram_specific_10_7> <RAM_Unit/contents_ram_specific_11_7> <RAM_Unit/contents_ram_specific_14_7> <RAM_Unit/contents_ram_specific_27_7> <RAM_Unit/contents_ram_specific_26_7> <RAM_Unit/contents_ram_specific_30_7> <RAM_Unit/contents_ram_specific_43_7> <RAM_Unit/contents_ram_specific_42_7> <RAM_Unit/contents_ram_specific_46_7> <RAM_Unit/contents_ram_specific_50_7> <RAM_Unit/contents_ram_specific_51_7> <RAM_Unit/contents_ram_specific_54_7> <RAM_Unit/contents_ram_specific_58_7> <RAM_Unit/contents_ram_specific_59_7> <RAM_Unit/contents_ram_specific_62_7> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_23_0> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_39_0> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_23_1> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_39_1> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_23_2> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_39_2> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_23_3> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_39_3> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_23_4> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_39_4> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_23_5> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_39_5> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_23_6> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_39_6> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_23_7> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_39_7> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/valor_Switch_6> in Unit <PICtop> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_Unit/valor_Switch_3> <RAM_Unit/valor_Switch_2> 
+WARNING:Xst:1710 - FF/Latch <RAM_Unit/contents_ram_specific_8_6> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_8_5> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_8_4> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_8_3> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_8_2> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_8_1> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_8_0> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_49_7> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_49_6> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_49_5> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_49_4> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_49_3> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_49_2> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_49_1> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_49_0> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_1_5> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/memory_election> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_L_6> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_L_5> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_L_4> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_L_3> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_L_2> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_L_1> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_L_0> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_H_6> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_H_5> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_H_4> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_H_3> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_H_2> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_H_1> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Temp_H_0> (without init value) has a constant value of 1 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_8_7> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/valor_Switch_5> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Switches_5> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/Switches_6> in Unit <PICtop> is equivalent to the following 2 FFs/Latches, which will be removed : <RAM_Unit/Switches_3> <RAM_Unit/Switches_2> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_7_0> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_63_0> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_7_1> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_63_1> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_7_2> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_63_2> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_7_3> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_63_3> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_7_4> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_63_4> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_7_5> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_63_5> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_7_6> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_63_6> 
+INFO:Xst:2261 - The FF/Latch <RAM_Unit/contents_ram_specific_7_7> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RAM_Unit/contents_ram_specific_63_7> 
+WARNING:Xst:1710 - FF/Latch <RAM_Unit/contents_ram_specific_2_0> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/contents_ram_specific_23_0> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/valor_Switch_7> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/valor_Switch_6> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Switches_7> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RAM_Unit/Switches_6> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <RAM_Unit/Mram_contents_ram_general8> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/Mram_contents_ram_general7> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/Mram_contents_ram_general6> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/Mram_contents_ram_general5> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/Mram_contents_ram_general4> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/Mram_contents_ram_general3> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/Mram_contents_ram_general1> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/Mram_contents_ram_general2> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_6_7> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_6_6> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_6_5> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_6_4> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_6_3> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_6_2> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_6_1> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_6_0> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_7_7> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_7_6> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_7_5> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_7_4> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_7_3> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_7_2> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_7_1> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_7_0> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_15_7> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_15_6> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_15_5> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_15_4> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_15_3> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_15_2> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_15_1> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_15_0> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_2_7> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_2_6> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_2_5> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_2_4> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_2_3> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_2_2> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_2_1> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_23_7> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_23_6> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_23_5> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_23_4> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_23_3> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_23_2> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:2677 - Node <RAM_Unit/contents_ram_specific_23_1> of sequential type is unconnected in block <PICtop>.
+
+Optimizing unit <PICtop> ...
+
+Optimizing unit <RS232top> ...
+
+Optimizing unit <RS232_TX> ...
+
+Optimizing unit <RS232_RX> ...
+
+Optimizing unit <ShiftRegister> ...
+WARNING:Xst:1710 - FF/Latch <RS232_PHY/Data_FF_7> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_6> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_5> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_4> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_3> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_2> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_1> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_0> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <RS232_PHY/Ack_in> of sequential type is unconnected in block <PICtop>.
+WARNING:Xst:1293 - FF/Latch <RS232_PHY/Receiver/HalfBitCounter/cuenta_7> has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <RS232_PHY/Transmitter/Pulse_Control/salida> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RS232_PHY/Receiver/BitCounter/salida> 
+INFO:Xst:2261 - The FF/Latch <RS232_PHY/Transmitter/Pulse_Control/cuenta_0> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RS232_PHY/Receiver/BitCounter/cuenta_0> 
+INFO:Xst:2261 - The FF/Latch <RS232_PHY/Transmitter/Pulse_Control/cuenta_1> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RS232_PHY/Receiver/BitCounter/cuenta_1> 
+INFO:Xst:2261 - The FF/Latch <RS232_PHY/Transmitter/Pulse_Control/cuenta_2> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RS232_PHY/Receiver/BitCounter/cuenta_2> 
+INFO:Xst:2261 - The FF/Latch <RS232_PHY/Transmitter/Pulse_Control/cuenta_3> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RS232_PHY/Receiver/BitCounter/cuenta_3> 
+INFO:Xst:2261 - The FF/Latch <RS232_PHY/Transmitter/Pulse_Control/cuenta_4> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RS232_PHY/Receiver/BitCounter/cuenta_4> 
+INFO:Xst:2261 - The FF/Latch <RS232_PHY/Transmitter/Pulse_Control/cuenta_5> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RS232_PHY/Receiver/BitCounter/cuenta_5> 
+INFO:Xst:2261 - The FF/Latch <RS232_PHY/Transmitter/Pulse_Control/cuenta_6> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RS232_PHY/Receiver/BitCounter/cuenta_6> 
+INFO:Xst:2261 - The FF/Latch <RS232_PHY/Transmitter/Pulse_Control/cuenta_7> in Unit <PICtop> is equivalent to the following FF/Latch, which will be removed : <RS232_PHY/Receiver/BitCounter/cuenta_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block PICtop, actual ratio is 0.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 40
+ Flip-Flops                                            : 40
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : PICtop.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 119
+#      GND                         : 3
+#      INV                         : 3
+#      LUT1                        : 8
+#      LUT2                        : 24
+#      LUT3                        : 10
+#      LUT4                        : 10
+#      LUT5                        : 6
+#      LUT6                        : 26
+#      MUXCY                       : 13
+#      VCC                         : 1
+#      XORCY                       : 15
+# FlipFlops/Latches                : 79
+#      FD                          : 23
+#      FDC                         : 5
+#      FDCE                        : 30
+#      FDP                         : 14
+#      FDR                         : 7
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 25
+#      IBUF                        : 2
+#      OBUF                        : 23
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              79  out of  18224     0%  
+ Number of Slice LUTs:                   87  out of   9112     0%  
+    Number used as Logic:                87  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    118
+   Number with an unused Flip Flop:      39  out of    118    33%  
+   Number with an unused LUT:            31  out of    118    26%  
+   Number of fully used LUT-FF pairs:    48  out of    118    40%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  26  out of    232    11%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 80    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.714ns (Maximum Frequency: 212.118MHz)
+   Minimum input arrival time before clock: 4.021ns
+   Maximum output required time after clock: 4.706ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 4.714ns (frequency: 212.118MHz)
+  Total number of paths / destination ports: 652 / 167
+-------------------------------------------------------------------------
+Delay:               4.714ns (Levels of Logic = 5)
+  Source:            RS232_PHY/Receiver/PresentState_FSM_FFd2 (FF)
+  Destination:       RS232_PHY/Internal_memory/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: RS232_PHY/Receiver/PresentState_FSM_FFd2 to RS232_PHY/Internal_memory/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              9   0.447   0.934  RS232_PHY/Receiver/PresentState_FSM_FFd2 (RS232_PHY/Receiver/PresentState_FSM_FFd2)
+     LUT2:I0->O            1   0.203   0.684  RS232_PHY/Receiver/PresentState_Store_out1 (RS232_PHY/Fifo_write)
+     begin scope: 'RS232_PHY/Internal_memory:wr_en'
+     LUT2:I0->O           18   0.203   1.050  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_wr_en)
+     LUT6:I5->O            1   0.205   0.684  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_comb2 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_comb2)
+     LUT6:I4->O            2   0.203   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_comb5 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_comb)
+     FDP:D                     0.102          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i
+    ----------------------------------------
+    Total                      4.714ns (1.363ns logic, 3.351ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 45 / 45
+-------------------------------------------------------------------------
+Offset:              4.021ns (Levels of Logic = 2)
+  Source:            Reset (PAD)
+  Destination:       RS232_PHY/LineRD_in (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Reset to RS232_PHY/LineRD_in
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            19   1.222   1.071  Reset_IBUF (Reset_IBUF)
+     INV:I->O             20   0.206   1.092  RS232_PHY/Reset_inv1_INV_0 (RS232_PHY/Receiver/Reset_inv)
+     FDC:CLR                   0.430          RS232_PHY/Receiver/PresentState_FSM_FFd2
+    ----------------------------------------
+    Total                      4.021ns (1.858ns logic, 2.163ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              4.706ns (Levels of Logic = 2)
+  Source:            RS232_PHY/Transmitter/PresentState_FSM_FFd1 (FF)
+  Destination:       RS232_TX (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: RS232_PHY/Transmitter/PresentState_FSM_FFd1 to RS232_TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              8   0.447   0.907  RS232_PHY/Transmitter/PresentState_FSM_FFd1 (RS232_PHY/Transmitter/PresentState_FSM_FFd1)
+     LUT3:I1->O            1   0.203   0.579  RS232_PHY/Transmitter/TX1 (RS232_TX_OBUF)
+     OBUF:I->O                 2.571          RS232_TX_OBUF (RS232_TX)
+    ----------------------------------------
+    Total                      4.706ns (3.221ns logic, 1.485ns route)
+                                       (68.4% logic, 31.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    4.714|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.57 secs
+ 
 --> 
 
-Total memory usage is 206144 kilobytes
+Total memory usage is 294624 kilobytes
 
-Number of errors   :   14 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  118 (   0 filtered)
+Number of infos    :   83 (   0 filtered)
 

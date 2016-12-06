@@ -6,6 +6,9 @@ USE IEEE.std_logic_unsigned.all;
 
 USE work.PIC_pkg.all;
 
+LIBRARY RS232_test;
+USE RS232_test.RS232_test.all;
+
 entity PICtop_tb is
 end PICtop_tb;
 

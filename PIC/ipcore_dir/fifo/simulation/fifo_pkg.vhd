@@ -198,6 +198,7 @@ PACKAGE fifo_pkg IS
  COMPONENT fifo_exdes IS
    PORT (
            CLK                       : IN  std_logic;
+     	   DATA_COUNT                : OUT std_logic_vector(6-1 DOWNTO 0);
            RST                       : IN  std_logic;
            WR_EN 		     : IN  std_logic;
            RD_EN                     : IN  std_logic;

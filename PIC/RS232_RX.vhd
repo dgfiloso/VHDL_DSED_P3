@@ -74,6 +74,9 @@ component Data_Count
 	--signal reset_half : std_logic;
 	signal enable_half : std_logic;
 	
+	signal enable_bitcounter : std_logic;
+	
+	
 begin
 	
 	reset_control <= reset_data and Reset;
@@ -88,7 +91,7 @@ begin
     port map (
       clk   => Clk,
       reset => Reset,
-      enable => '1',
+      enable => enable_bitcounter,
       send   => bit_out);
 		
 	HalfBitCounter: Pulse_Width
@@ -109,7 +112,7 @@ begin
 	enable_half_counter: process(clk, Reset, bit_out, half_bit_out, enable_half)
 	begin
 		if Reset = '0' then
-			enable_half <= '1';
+			enable_half <= '0';
 		elsif clk'event and clk = '1' then
 			if half_bit_out = '1' or bit_out = '1' then
 				enable_half <= not enable_half;
@@ -171,16 +174,19 @@ begin
 				Code_out <= '0';
 				Store_out <= '0';
 				reset_data <= '0';
+				enable_bitcounter <= '0';
 			when StartBit => 
 				Valid_out <= '0';
 				Code_out <= '0';
 				Store_out <= '0';
 				reset_data <= '0';
+				enable_bitcounter <= '1';
 			when RcvData =>
 				Store_out <= '0';
 				reset_data <= '1';
 				Code_out <= '0';
 				Valid_out <= '0';
+				enable_bitcounter <= '1';
 				if half_bit_out = '1' then
 					case count is
 						when "0000" => 
@@ -213,6 +219,7 @@ begin
 					end case;
 				end if;
 			when StopBit => 
+				enable_bitcounter <= '1';
 				if half_bit_out = '1' and LineRD_in = '1' then
 					Valid_out <= '0';
 					Code_out <= '0';
@@ -221,7 +228,7 @@ begin
 				else
 					Valid_out <= '0';
 					Code_out <= '0';
-					Store_out <= '1';
+					Store_out <= '0';
 					reset_data <= '0';
 				end if;
 			when others => 
@@ -229,6 +236,7 @@ begin
 				Code_out <= '0';
 				Store_out <= '0';
 				reset_data <= '0';
+				enable_bitcounter <= '0';
 		end case;
 	end process;
 

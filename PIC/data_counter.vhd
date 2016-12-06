@@ -36,12 +36,12 @@ entity data_counter is
     Port ( clk : in  STD_LOGIC;
 			  reset : in  STD_LOGIC;
            enable : in  STD_LOGIC;
-           count : out  STD_LOGIC_VECTOR (1 downto 0));
+           count : out  STD_LOGIC_VECTOR (2 downto 0));
 end data_counter;
 
 architecture Behavioral of data_counter is
 
-signal cuenta : std_logic_vector(1 downto 0) := (others =>'0') ;
+signal cuenta : std_logic_vector(2 downto 0) := (others =>'0') ;
 
 begin
 
@@ -51,7 +51,7 @@ process(clk, reset, enable, cuenta)
 begin
 	if clk'event and clk = '1' then	
 		if reset = '1' then
-			cuenta <= "00";
+			cuenta <= "000";
 		elsif enable <= '1' then
 			cuenta <= cuenta + 1;
 		end if;

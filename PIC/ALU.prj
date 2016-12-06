@@ -1,0 +1,3 @@
+vhdl work "PIC_pkg.vhd"
+vhdl work "ALU.vhd"
+vhdl RS232_test "lib/RS232_test.vhd"

@@ -31,6 +31,10 @@ USE ieee.std_logic_1164.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
+LIBRARY RS232_test;
+USE RS232_test.RS232_test.all;
+
+USE work.PIC_pkg.all;
  
 ENTITY tb_PIC IS
 END tb_PIC;
@@ -87,19 +91,39 @@ BEGIN
 		Clk <= '1';
 		wait for Clk_period/2;
    end process;
- 
 
-   -- Stimulus process
-   stim_proc: process
-   begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
+---------------------------------------------------------------------------------
+-- Simulación del procesador
+----------------------------------------------------------------------------------
+--CPU: process (clk)
+--begin
+--	if clk'event and clk = '1' then
+--		if Reset = '1' then
+--			DMA_ACK <= '0';
+--			Send_comm <= '0';
+--		end if;
+--		if DMA_RQ = '0' then
+--			DMA_ACK <= '0';
+--		elsif DMA_RQ = '1' then
+--			DMA_ACK <= '1';
+--		end if;
+--	end if;
+--end process;
 
-      wait for Clk_period*10;
+ -------------------------------------------------------------------------------
+-- Sending some stuff through RS232 port
+-------------------------------------------------------------------------------
 
-      -- insert stimulus here 
-
-      wait;
-   end process;
+  SEND_STUFF : process
+  begin
+     RS232_RX <= '1';
+     wait for 40 us;
+     Transmit(RS232_RX, X"49");
+     wait for 40 us;
+     Transmit(RS232_RX, X"34");
+     wait for 40 us;
+     Transmit(RS232_RX, X"31");
+     wait;
+  end process SEND_STUFF;
 
 END;

@@ -12,3 +12,4 @@ xst -intstyle ise -ifn "C:/Users/dsed12/Desktop/DSED/Practica 3/PIC/DMA.xst" -of
 xst -intstyle ise -ifn "C:/Users/dsed12/Desktop/DSED/Practica 3/PIC/DMA.xst" -ofn "C:/Users/dsed12/Desktop/DSED/Practica 3/PIC/DMA.syr" 
 xst -intstyle ise -ifn "C:/Users/dsed12/Desktop/DSED/Practica 3/PIC/DMA.xst" -ofn "C:/Users/dsed12/Desktop/DSED/Practica 3/PIC/DMA.syr" 
 xst -intstyle ise -ifn "C:/Users/dsed12/Desktop/DSED/Practica 3/PIC/DMA.xst" -ofn "C:/Users/dsed12/Desktop/DSED/Practica 3/PIC/DMA.syr" 
+xst -intstyle ise -ifn "C:/Users/dsed12/Desktop/DSED/Practica 3/PIC/DMA.xst" -ofn "C:/Users/dsed12/Desktop/DSED/Practica 3/PIC/DMA.syr" 

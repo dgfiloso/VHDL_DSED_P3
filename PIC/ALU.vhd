@@ -57,25 +57,20 @@ signal Flag_Z: std_logic;
 
 begin
 
---process(clk)  -- asignacion de señales a las salidas
---begin
---	if clk'event and clk = '1' then
---		FlagZ <= Flag_Z;
---	end if;
---end process
-
-
-process(Clk, Databus)
+process(Clk, Databus, Reset)
 begin
 	if Reset = '0' then
 		operandoA <= (others => '0');
 		operandoB <= (others => '0');
 		acumulador <= (others => '0');
 		index <= (others => '0');
+		Flag_Z <= '0';
+		Databus <= (others => 'Z');
 	elsif Clk'event and Clk = '1' then
 		Flag_Z <= '0';
 		case u_instruction is
 			when nop =>
+				Databus <= (others => 'Z');
 			when op_lda =>
 				operandoA <= Databus;
 			when op_ldb =>
@@ -86,112 +81,130 @@ begin
 				index <= Databus;
 			when op_mvacc2id =>
 				index <= acumulador;
+				Databus <= (others => 'Z');
 			when op_mvacc2a =>
 				operandoA <= acumulador;
+				Databus <= (others => 'Z');
 			when op_mvacc2b =>
 				operandoB <= acumulador;
+				Databus <= (others => 'Z');
 			when op_add =>
 				acumulador <= operandoA + operandoB;
-				if acumulador = (others => '0') then
+				if (operandoA + operandoB) = X"00" then
 					Flag_Z <= '1';
 				end if;
+				Databus <= (others => 'Z');
 			when op_sub =>
 				acumulador <= operandoA - operandoB;
-				if acumulador = (others => '0') then
+				if (operandoA - operandoB) = X"00" then
 					Flag_Z <= '0';
 				end if;
+				Databus <= (others => 'Z');
 			when op_shiftl =>
 				acumulador <= acumulador(7 downto 1) & '0';
+				Databus <= (others => 'Z');
 			when op_shiftr =>
 				acumulador <= '0' & acumulador(6 downto 0);
+				Databus <= (others => 'Z');
 			when op_and =>
 				acumulador <= operandoA and operandoB;
-				if acumulador = (others => '0') then
+				if (operandoA and operandoB) = X"00" then
 					Flag_Z <= '1';
 				end if;
+				Databus <= (others => 'Z');
 			when op_or =>
 				acumulador <= operandoA or operandoB;
-				if acumulador = (others => '0') then
+				if (operandoA or operandoB) = X"00" then
 					Flag_Z <= '1';
 				end if;
+				Databus <= (others => 'Z');
 			when op_xor =>
 				acumulador <= operandoA xor operandoB;
-				if acumulador = (others => '0') then
+				if (operandoA xor operandoB) = X"00" then
 					Flag_Z <= '1';
 				end if;
+				Databus <= (others => 'Z');
 			when op_cmpe =>
 				if (operandoA = OperandoB) then
 					Flag_Z <= '1';
 				end if;
+				Databus <= (others => 'Z');
 			when op_cmpl =>
 				if (operandoA < OperandoB) then
 					Flag_Z <= '1';
 				end if;
+				Databus <= (others => 'Z');
 			when op_cmpg =>
 				if (operandoA > OperandoB) then
 					Flag_Z <= '1';
 				end if;
+				Databus <= (others => 'Z');
 			when op_ascii2bin =>
-				if operandoA = 0x30 then
-					Databus <= 0;
-				elsif operandoA = 0x31 then
-					Databus <= 1;
-				elsif operandoA = 0x32 then
-					Databus <= 2;
-				elsif operandoA = 0x33 then
-					Databus <= 3;
-				elsif operandoA = 0x34 then
-					Databus <= 4;
-				elsif operandoA = 0x35 then
-					Databus <= 5;
-				elsif operandoA = 0x36 then
-					Databus <= 6;
-				elsif operandoA = 0x37 then
-					Databus <= 7;
-				elsif operandoA = 0x38 then
-					Databus <= 8;
-				elsif operandoA = 0x39 then
-					Databus <= 9;
+				Databus <= (others => 'Z');
+				if operandoA = X"30" then
+					acumulador <= X"00";
+				elsif operandoA = X"31" then
+					acumulador <= X"01";
+				elsif operandoA = X"32" then
+					acumulador <= X"02";
+				elsif operandoA = X"33" then
+					acumulador <= X"03";
+				elsif operandoA = X"34" then
+					acumulador <= X"04";
+				elsif operandoA = X"35" then
+					acumulador <= X"05";
+				elsif operandoA = X"36" then
+					acumulador <= X"06";
+				elsif operandoA = X"37" then
+					acumulador <= X"07";
+				elsif operandoA = X"38" then
+					acumulador <= X"08";
+				elsif operandoA = X"39" then
+					acumulador <= X"09";
 				else
-					Databus <= 0xFF;
+					acumulador <= X"FF";
 				end if;
 			when op_bin2ascii =>
+				Databus <= (others => 'Z');
 				if operandoA = 0 then
-					Databus <= 0x30;
+					acumulador <= X"30";
 				elsif operandoA = 1 then
-					Databus <= 0x31;
+					acumulador <= X"31";
 				elsif operandoA = 2 then
-					Databus <= 0x32;
+					acumulador <= X"32";
 				elsif operandoA = 3 then
-					Databus <= 0x33;
+					acumulador <= X"33";
 				elsif operandoA = 4 then
-					Databus <= 0x34;
+					acumulador <= X"34";
 				elsif operandoA = 5 then
-					Databus <= 0x35;
+					acumulador <= X"35";
 				elsif operandoA = 6 then
-					Databus <= 0x36;
+					acumulador <= X"36";
 				elsif operandoA = 7 then
-					Databus <= 0x37;
+					acumulador <= X"37";
 				elsif operandoA = 8 then
-					Databus <= 0x38;
+					acumulador <= X"38";
 				elsif operandoA = 9 then
-					Databus <= 0x39;
+					acumulador <= X"39";
 				elsif operandoA = 10 then
-					Databus <= 0x41;				-- A
+					acumulador <= X"41";				-- A
 				elsif operandoA = 11 then
-					Databus <= 0x42;				-- B
+					acumulador <= X"42";				-- B
 				elsif operandoA = 12 then
-					Databus <= 0x43;				-- C
+					acumulador <= X"43";				-- C
 				elsif operandoA = 13 then
-					Databus <= 0x44;				-- D
+					acumulador <= X"44";				-- D
 				elsif operandoA = 14 then
-					Databus <= 0x45;				-- E
+					acumulador <= X"45";				-- E
 				elsif operandoA = 15 then
-					Databus <= 0x46;				-- F
+					acumulador <= X"46";				-- F
 				else
-					Databus <= 0xFF;
+					acumulador <= X"FF";
 				end if;
 			when op_oeacc =>
+				Databus <= acumulador;
+			when others =>
+				Databus <= (others => 'Z');
 		end case;
 		FlagZ <= Flag_Z;
 		Index_Reg <= index;

@@ -95,6 +95,7 @@ ARCHITECTURE simulation_arch OF fifo_synth IS
 
     -- FIFO interface signal declarations
     SIGNAL clk_i	                  :   STD_LOGIC;
+    SIGNAL data_count                     :   STD_LOGIC_VECTOR(6-1 DOWNTO 0);
     SIGNAL rst	                          :   STD_LOGIC;
     SIGNAL wr_en                          :   STD_LOGIC;
     SIGNAL rd_en                          :   STD_LOGIC;
@@ -252,6 +253,7 @@ ARCHITECTURE simulation_arch OF fifo_synth IS
   fifo_inst : fifo_exdes 
     PORT MAP (
            CLK                       => clk_i,
+           DATA_COUNT                => data_count,
            RST                       => rst,
            WR_EN 		     => wr_en,
            RD_EN                     => rd_en,

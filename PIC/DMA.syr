@@ -123,9 +123,10 @@ Parsing architecture <Behavioral> of entity <dma>.
 =========================================================================
 
 Elaborating entity <DMA> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\DMA.vhd" Line 184. Case statement is complete. others clause is never selected
 
 Elaborating entity <data_counter> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\DMA.vhd" Line 101: ff_count should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\DMA.vhd" Line 205. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -134,48 +135,52 @@ Elaborating entity <data_counter> (architecture <Behavioral>) from library <work
 Synthesizing Unit <DMA>.
     Related source file is "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\DMA.vhd".
 WARNING:Xst:647 - Input <RX_Full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RX_Empty> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ACK_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <TX_RDY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 2-bit register for signal <current_state>.
-INFO:Xst:1799 - State tx is never reached in FSM <current_state>.
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
-    | Transitions        | 6                                              |
+    | Transitions        | 9                                              |
     | Inputs             | 3                                              |
-    | Outputs            | 4                                              |
+    | Outputs            | 5                                              |
     | Clock              | Clk (rising_edge)                              |
-    | Reset              | Reset (positive)                               |
+    | Reset              | Reset (negative)                               |
     | Reset type         | asynchronous                                   |
     | Reset State        | idle                                           |
     | Power Up State     | idle                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4x4-bit Read Only RAM for signal <_n0107>
-    Found 1-bit 4-to-1 multiplexer for signal <enable_counter> created at line 142.
-    Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_count[1]_Mux_25_o> created at line 142.
-    Found 1-bit tristate buffer for signal <Address<7>> created at line 126
-    Found 1-bit tristate buffer for signal <Address<6>> created at line 126
-    Found 1-bit tristate buffer for signal <Address<5>> created at line 126
-    Found 1-bit tristate buffer for signal <Address<4>> created at line 126
-    Found 1-bit tristate buffer for signal <Address<3>> created at line 126
-    Found 1-bit tristate buffer for signal <Address<2>> created at line 126
-    Found 1-bit tristate buffer for signal <Address<1>> created at line 126
-    Found 1-bit tristate buffer for signal <Address<0>> created at line 126
-    Found 1-bit tristate buffer for signal <Databus<7>> created at line 126
-    Found 1-bit tristate buffer for signal <Databus<6>> created at line 126
-    Found 1-bit tristate buffer for signal <Databus<5>> created at line 126
-    Found 1-bit tristate buffer for signal <Databus<4>> created at line 126
-    Found 1-bit tristate buffer for signal <Databus<3>> created at line 126
-    Found 1-bit tristate buffer for signal <Databus<2>> created at line 126
-    Found 1-bit tristate buffer for signal <Databus<1>> created at line 126
-    Found 1-bit tristate buffer for signal <Databus<0>> created at line 126
-    Found 1-bit tristate buffer for signal <Write_en> created at line 126
-    Found 1-bit tristate buffer for signal <OE> created at line 126
+    Found 4x1-bit Read Only RAM for signal <count[2]_GND_4_o_Mux_14_o>
+    Found 8x7-bit Read Only RAM for signal <_n0139>
+    Found 1-bit 3-to-1 multiplexer for signal <READY> created at line 148.
+    Found 1-bit 4-to-1 multiplexer for signal <enable_counter> created at line 148.
+    Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_count[2]_Mux_30_o> created at line 148.
+WARNING:Xst:737 - Found 1-bit latch for signal <DMA_RQ>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <Address<7>> created at line 135
+    Found 1-bit tristate buffer for signal <Address<6>> created at line 135
+    Found 1-bit tristate buffer for signal <Address<5>> created at line 135
+    Found 1-bit tristate buffer for signal <Address<4>> created at line 135
+    Found 1-bit tristate buffer for signal <Address<3>> created at line 135
+    Found 1-bit tristate buffer for signal <Address<2>> created at line 135
+    Found 1-bit tristate buffer for signal <Address<1>> created at line 135
+    Found 1-bit tristate buffer for signal <Address<0>> created at line 135
+    Found 1-bit tristate buffer for signal <Databus<7>> created at line 135
+    Found 1-bit tristate buffer for signal <Databus<6>> created at line 135
+    Found 1-bit tristate buffer for signal <Databus<5>> created at line 135
+    Found 1-bit tristate buffer for signal <Databus<4>> created at line 135
+    Found 1-bit tristate buffer for signal <Databus<3>> created at line 135
+    Found 1-bit tristate buffer for signal <Databus<2>> created at line 135
+    Found 1-bit tristate buffer for signal <Databus<1>> created at line 135
+    Found 1-bit tristate buffer for signal <Databus<0>> created at line 135
+    Found 1-bit tristate buffer for signal <Write_en> created at line 135
+    Found 1-bit tristate buffer for signal <OE> created at line 135
     Summary:
-	inferred   1 RAM(s).
-	inferred   7 Multiplexer(s).
+	inferred   2 RAM(s).
+	inferred   1 Latch(s).
+	inferred  11 Multiplexer(s).
 	inferred  18 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <DMA> synthesized.
@@ -183,25 +188,29 @@ Unit <DMA> synthesized.
 Synthesizing Unit <data_counter>.
     Related source file is "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\data_counter.vhd".
 WARNING:Xst:647 - Input <enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 2-bit register for signal <cuenta>.
-    Found 2-bit adder for signal <cuenta[1]_GND_25_o_add_1_OUT> created at line 56.
+    Found 3-bit register for signal <cuenta>.
+    Found 3-bit adder for signal <cuenta[2]_GND_7_o_add_1_OUT> created at line 56.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred   2 D-type flip-flop(s).
+	inferred   3 D-type flip-flop(s).
 Unit <data_counter> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 4x4-bit single-port Read Only RAM                     : 1
+# RAMs                                                 : 2
+ 4x1-bit single-port Read Only RAM                     : 1
+ 8x7-bit single-port Read Only RAM                     : 1
 # Adders/Subtractors                                   : 1
- 2-bit adder                                           : 1
+ 3-bit adder                                           : 1
 # Registers                                            : 1
- 2-bit register                                        : 1
-# Multiplexers                                         : 7
- 1-bit 2-to-1 multiplexer                              : 3
+ 3-bit register                                        : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 2
 # Tristates                                            : 18
@@ -216,12 +225,23 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <DMA>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0107> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_count[2]_GND_4_o_Mux_14_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count<2:1>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0139> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 7-bit                      |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <count>         |          |
     |     diA            | connected to signal <GND>           |          |
@@ -237,12 +257,14 @@ Unit <data_counter> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 4x4-bit single-port distributed Read Only RAM         : 1
+# RAMs                                                 : 2
+ 4x1-bit single-port distributed Read Only RAM         : 1
+ 8x7-bit single-port distributed Read Only RAM         : 1
 # Counters                                             : 1
- 2-bit up counter                                      : 1
-# Multiplexers                                         : 5
- 1-bit 2-to-1 multiplexer                              : 1
+ 3-bit up counter                                      : 1
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 5
+ 1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 2
 # FSMs                                                 : 1
@@ -258,7 +280,7 @@ Optimizing FSM <FSM_0> on signal <current_state[1:2]> with user encoding.
  State      | Encoding
 ------------------------
  idle       | 00
- tx         | unreached
+ tx         | 01
  wait_buses | 10
  rx         | 11
 ------------------------
@@ -268,6 +290,8 @@ Optimizing unit <DMA> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block DMA, actual ratio is 0.
+FlipFlop current_state_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop current_state_FSM_FFd2 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
@@ -275,8 +299,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 4
- Flip-Flops                                            : 4
+# Registers                                            : 9
+ Flip-Flops                                            : 9
 
 =========================================================================
 
@@ -299,21 +323,23 @@ Top Level Output File Name         : DMA.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 20
+# BELS                             : 28
 #      GND                         : 1
 #      INV                         : 1
-#      LUT2                        : 3
-#      LUT3                        : 4
-#      LUT4                        : 2
-#      LUT5                        : 8
+#      LUT2                        : 4
+#      LUT3                        : 2
+#      LUT4                        : 4
+#      LUT5                        : 13
+#      LUT6                        : 2
 #      VCC                         : 1
-# FlipFlops/Latches                : 4
-#      FD                          : 2
-#      FDC                         : 2
+# FlipFlops/Latches                : 10
+#      FD                          : 3
+#      FDC                         : 6
+#      LD                          : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 42
-#      IBUF                        : 12
+# IO Buffers                       : 47
+#      IBUF                        : 17
 #      IOBUF                       : 8
 #      OBUF                        : 12
 #      OBUFT                       : 10
@@ -325,20 +351,21 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               4  out of  18224     0%  
- Number of Slice LUTs:                   18  out of   9112     0%  
-    Number used as Logic:                18  out of   9112     0%  
+ Number of Slice Registers:               9  out of  18224     0%  
+ Number of Slice LUTs:                   26  out of   9112     0%  
+    Number used as Logic:                26  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     18
-   Number with an unused Flip Flop:      14  out of     18    77%  
-   Number with an unused LUT:             0  out of     18     0%  
-   Number of fully used LUT-FF pairs:     4  out of     18    22%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:     28
+   Number with an unused Flip Flop:      19  out of     28    67%  
+   Number with an unused LUT:             2  out of     28     7%  
+   Number of fully used LUT-FF pairs:     7  out of     28    25%  
+   Number of unique control sets:         3
 
 IO Utilization: 
- Number of IOs:                          46
- Number of bonded IOBs:                  43  out of    232    18%  
+ Number of IOs:                          52
+ Number of bonded IOBs:                  48  out of    232    20%  
+    IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -361,11 +388,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 4     |
------------------------------------+------------------------+-------+
+-------------------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                                   | Clock buffer(FF name)  | Load  |
+-------------------------------------------------------------------------------+------------------------+-------+
+current_state[1]_count[2]_Mux_98_o(Mmux_current_state[1]_count[2]_Mux_98_o11:O)| NONE(*)(DMA_RQ)        | 1     |
+Clk                                                                            | BUFGP                  | 9     |
+-------------------------------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -375,10 +407,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 1.891ns (Maximum Frequency: 528.877MHz)
-   Minimum input arrival time before clock: 2.374ns
-   Maximum output required time after clock: 5.234ns
-   Maximum combinational path delay: 5.499ns
+   Minimum period: 1.928ns (Maximum Frequency: 518.672MHz)
+   Minimum input arrival time before clock: 3.538ns
+   Maximum output required time after clock: 5.460ns
+   Maximum combinational path delay: 5.296ns
 
 Timing Details:
 ---------------
@@ -386,51 +418,52 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 1.891ns (frequency: 528.877MHz)
-  Total number of paths / destination ports: 8 / 4
+  Clock period: 1.928ns (frequency: 518.672MHz)
+  Total number of paths / destination ports: 21 / 9
 -------------------------------------------------------------------------
-Delay:               1.891ns (Levels of Logic = 1)
-  Source:            BitCounter/cuenta_1 (FF)
-  Destination:       BitCounter/cuenta_1 (FF)
+Delay:               1.928ns (Levels of Logic = 1)
+  Source:            current_state_FSM_FFd2 (FF)
+  Destination:       current_state_FSM_FFd2 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: BitCounter/cuenta_1 to BitCounter/cuenta_1
+  Data Path: current_state_FSM_FFd2 to current_state_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              12   0.447   1.137  BitCounter/cuenta_1 (BitCounter/cuenta_1)
-     LUT3:I0->O            1   0.205   0.000  BitCounter/cuenta_1_rstpot (BitCounter/cuenta_1_rstpot)
-     FD:D                      0.102          BitCounter/cuenta_1
+     FDC:C->Q             19   0.447   1.176  current_state_FSM_FFd2 (current_state_FSM_FFd2)
+     LUT5:I3->O            4   0.203   0.000  current_state_FSM_FFd2-In1 (current_state_FSM_FFd2-In)
+     FDC:D                     0.102          current_state_FSM_FFd2
     ----------------------------------------
-    Total                      1.891ns (0.754ns logic, 1.137ns route)
-                                       (39.9% logic, 60.1% route)
+    Total                      1.928ns (0.752ns logic, 1.176ns route)
+                                       (39.0% logic, 61.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 5 / 4
+  Total number of paths / destination ports: 52 / 12
 -------------------------------------------------------------------------
-Offset:              2.374ns (Levels of Logic = 2)
-  Source:            DMA_ACK (PAD)
-  Destination:       current_state_FSM_FFd1 (FF)
+Offset:              3.538ns (Levels of Logic = 3)
+  Source:            FF_Count<5> (PAD)
+  Destination:       current_state_FSM_FFd2 (FF)
   Destination Clock: Clk rising
 
-  Data Path: DMA_ACK to current_state_FSM_FFd1
+  Data Path: FF_Count<5> to current_state_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.222   0.845  DMA_ACK_IBUF (DMA_ACK_IBUF)
-     LUT4:I1->O            1   0.205   0.000  current_state_FSM_FFd1-In1 (current_state_FSM_FFd1-In)
-     FDC:D                     0.102          current_state_FSM_FFd1
+     IBUF:I->O             1   1.222   0.944  FF_Count_5_IBUF (FF_Count_5_IBUF)
+     LUT6:I0->O            2   0.203   0.864  GND_4_o_FF_Count[5]_equal_2_o<5>1 (GND_4_o_FF_Count[5]_equal_2_o)
+     LUT5:I1->O            4   0.203   0.000  current_state_FSM_FFd2-In1 (current_state_FSM_FFd2-In)
+     FDC:D                     0.102          current_state_FSM_FFd2
     ----------------------------------------
-    Total                      2.374ns (1.529ns logic, 0.845ns route)
-                                       (64.4% logic, 35.6% route)
+    Total                      3.538ns (1.730ns logic, 1.808ns route)
+                                       (48.9% logic, 51.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 85 / 29
+  Total number of paths / destination ports: 115 / 29
 -------------------------------------------------------------------------
-Offset:              5.234ns (Levels of Logic = 2)
+Offset:              5.460ns (Levels of Logic = 2)
   Source:            current_state_FSM_FFd1 (FF)
   Destination:       Address<7> (PAD)
   Source Clock:      Clk rising
@@ -439,31 +472,50 @@ Offset:              5.234ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             15   0.447   1.210  current_state_FSM_FFd1 (current_state_FSM_FFd1)
-     LUT4:I1->O            8   0.205   0.802  current_state[1]_count[1]_Mux_25_o_inv1 (current_state[1]_count[1]_Mux_25_o_inv)
+     FDC:C->Q             20   0.447   1.437  current_state_FSM_FFd1 (current_state_FSM_FFd1)
+     LUT5:I0->O            8   0.203   0.802  current_state[1]_count[2]_Mux_30_o_inv1 (current_state[1]_count[2]_Mux_30_o_inv)
      OBUFT:T->O                2.571          Address_7_OBUFT (Address<7>)
     ----------------------------------------
-    Total                      5.234ns (3.223ns logic, 2.011ns route)
-                                       (61.6% logic, 38.4% route)
+    Total                      5.460ns (3.221ns logic, 2.239ns route)
+                                       (59.0% logic, 41.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'current_state[1]_count[2]_Mux_98_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            DMA_RQ (LATCH)
+  Destination:       DMA_RQ (PAD)
+  Source Clock:      current_state[1]_count[2]_Mux_98_o falling
+
+  Data Path: DMA_RQ to DMA_RQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  DMA_RQ (DMA_RQ_OBUF)
+     OBUF:I->O                 2.571          DMA_RQ_OBUF (DMA_RQ)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 17 / 17
 -------------------------------------------------------------------------
-Delay:               5.499ns (Levels of Logic = 3)
-  Source:            Databus<7> (PAD)
-  Destination:       TX_Data<7> (PAD)
+Delay:               5.296ns (Levels of Logic = 3)
+  Source:            Send_comm (PAD)
+  Destination:       READY (PAD)
 
-  Data Path: Databus<7> to TX_Data<7>
+  Data Path: Send_comm to READY
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.222   0.924  Databus_7_IOBUF (N01)
-     LUT5:I0->O            1   0.203   0.579  Mmux_TX_Data81 (TX_Data_7_OBUF)
-     OBUF:I->O                 2.571          TX_Data_7_OBUF (TX_Data<7>)
+     IBUF:I->O             2   1.222   0.721  Send_comm_IBUF (Send_comm_IBUF)
+     LUT6:I4->O            1   0.203   0.579  Mmux_READY11 (READY_OBUF)
+     OBUF:I->O                 2.571          READY_OBUF (READY)
     ----------------------------------------
-    Total                      5.499ns (3.996ns logic, 1.503ns route)
-                                       (72.7% logic, 27.3% route)
+    Total                      5.296ns (3.996ns logic, 1.300ns route)
+                                       (75.5% logic, 24.5% route)
 
 =========================================================================
 
@@ -475,20 +527,28 @@ Clock to Setup on destination clock Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |    1.891|         |         |         |
+Clk            |    1.928|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state[1]_count[2]_Mux_98_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |         |         |    2.124|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.64 secs
+Total CPU time to Xst completion: 5.86 secs
  
 --> 
 
-Total memory usage is 257020 kilobytes
+Total memory usage is 257468 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

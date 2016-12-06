@@ -21,10 +21,10 @@ entity CPU is
            DMA_READY : in  STD_LOGIC;
            Alu_op : out  alu_op;
            Index_Reg : in  STD_LOGIC_VECTOR (7 downto 0);
-           FlagZ : in  STD_LOGIC;
-           FlagC : in  STD_LOGIC;
-           FlagN : in  STD_LOGIC;
-           FlagE : in  STD_LOGIC);
+           FlagZ : in  STD_LOGIC);
+          -- FlagC : in  STD_LOGIC;
+          -- FlagN : in  STD_LOGIC;
+          -- FlagE : in  STD_LOGIC);
 end CPU;
 
 architecture Behavioral of CPU is

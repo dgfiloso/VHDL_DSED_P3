@@ -31,15 +31,15 @@ BEGIN
 -------------------------------------------------------------------------
 -- Eleccion de Memoria
 -------------------------------------------------------------------------
-election : process (clk)
+election : process (address)
 begin
-	if clk'event and clk = '1' then
+	--if clk'event and clk = '1' then
 		if address > X"3F" then 				-- Memoria general
 			memory_election <= '0';
 		elsif address < X"40" then				-- Memoria específica
 			memory_election <= '1';
 		end if;
-	end if;
+	--end if;
 end process;
 -------------------------------------------------------------------------
 
@@ -68,9 +68,9 @@ databus <= contents_ram_general(conv_integer(address)) when (oe = '0' and memory
 pe_ram : process (clk, Reset)
 begin
 	if reset = '0' then
-		contents_ram_specific(conv_Integer(DMA_RX_BUFFER_MSB)) <= (others => '0'); -- Valor de la instrucción
-		contents_ram_specific(conv_Integer(DMA_RX_BUFFER_MID)) <= (others => '0');	-- Valor del parámetro 1
-		contents_ram_specific(conv_Integer(DMA_RX_BUFFER_LSB)) <= (others => '0'); -- Valor del parámetro 2
+		contents_ram_specific(conv_Integer(DMA_RX_BUFFER_MSB)) <= (others => '0'); -- Valor de la instrucción Rx
+		contents_ram_specific(conv_Integer(DMA_RX_BUFFER_MID)) <= (others => '0');	-- Valor del parámetro 1 Rx
+		contents_ram_specific(conv_Integer(DMA_RX_BUFFER_LSB)) <= (others => '0'); -- Valor del parámetro 2 Rx
 		contents_ram_specific(conv_Integer(NEW_INST)) <= (others => '0');				-- Flag que indica llegada de un nuevo comando
 		contents_ram_specific(conv_Integer(DMA_TX_BUFFER_MSB)) <= (others => '0');	-- Valor 1 de la Tx
 		contents_ram_specific(conv_Integer(DMA_TX_BUFFER_LSB)) <= (others => '0');	-- Valor 2 de la Tx

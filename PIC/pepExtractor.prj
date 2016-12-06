@@ -1,7 +1,7 @@
+work	"Comunicador.vhd"
 work	"DMA.vhd"
 work	"Data_Count.vhd"
 work	"PIC_pkg.vhd"
-work	"PICtop.vhd"
 work	"Pulse_width.vhd"
 work	"RAM.vhd"
 work	"RS232_RX.vhd"

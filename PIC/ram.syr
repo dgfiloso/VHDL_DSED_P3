@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: ram.prj
 
@@ -108,10 +108,10 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\PIC_pkg.vhd" into library work
+Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\PIC_pkg.vhd" into library work
 Parsing package <PIC_pkg>.
 Parsing package body <PIC_pkg>.
-Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RAM.vhd" into library work
+Parsing VHDL file "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\RAM.vhd" into library work
 Parsing entity <ram>.
 Parsing architecture <behavior> of entity <ram>.
 
@@ -126,7 +126,7 @@ Elaborating entity <ram> (architecture <behavior>) from library <work>.
 =========================================================================
 
 Synthesizing Unit <ram>.
-    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RAM.vhd".
+    Related source file is "C:\Users\dsed12\Desktop\DSED\Practica 3\PIC\RAM.vhd".
 WARNING:Xst:3035 - Index value(s) does not match array range for signal <contents_ram_general>, simulation mismatch.
     Found 192x8-bit single-port RAM <Mram_contents_ram_general> for signal <contents_ram_general>.
     Found 8-bit register for signal <contents_ram_specific<41>>.
@@ -147,12 +147,12 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <content
     Found 8-bit register for signal <contents_ram_specific<18>>.
     Found 8-bit register for signal <contents_ram_specific<17>>.
     Found 8-bit register for signal <contents_ram_specific<16>>.
-    Found 8-bit register for signal <contents_ram_specific<5>>.
-    Found 8-bit register for signal <contents_ram_specific<4>>.
     Found 8-bit register for signal <contents_ram_specific<3>>.
     Found 8-bit register for signal <contents_ram_specific<2>>.
     Found 8-bit register for signal <contents_ram_specific<1>>.
     Found 8-bit register for signal <contents_ram_specific<0>>.
+    Found 8-bit register for signal <contents_ram_specific<5>>.
+    Found 8-bit register for signal <contents_ram_specific<4>>.
     Found 8-bit register for signal <contents_ram_specific<49>>.
     Found 8-bit register for signal <contents_ram_specific<63>>.
     Found 8-bit register for signal <contents_ram_specific<62>>.
@@ -197,7 +197,6 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <content
     Found 7-bit register for signal <Temp_L>.
     Found 8-bit register for signal <valor_Switch>.
     Found 8-bit register for signal <Switches>.
-    Found 1-bit register for signal <memory_election>.
     Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][7]_PWR_6_o_wide_mux_303_OUT>
     Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][3]_PWR_6_o_wide_mux_304_OUT>
     Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>> created at line 60.
@@ -216,11 +215,13 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <content
     Found 1-bit tristate buffer for signal <databus<2>> created at line 60
     Found 1-bit tristate buffer for signal <databus<1>> created at line 60
     Found 1-bit tristate buffer for signal <databus<0>> created at line 60
+WARNING:Xst:737 - Found 1-bit latch for signal <memory_election>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 8-bit comparator greater for signal <GND_6_o_address[7]_LessThan_1_o> created at line 37
     Found 8-bit comparator greater for signal <address[7]_GND_6_o_LessThan_2_o> created at line 39
     Summary:
 	inferred   3 RAM(s).
-	inferred 543 D-type flip-flop(s).
+	inferred 542 D-type flip-flop(s).
+	inferred   1 Latch(s).
 	inferred   2 Comparator(s).
 	inferred  16 Multiplexer(s).
 	inferred   8 Tristate(s).
@@ -233,10 +234,11 @@ Macro Statistics
 # RAMs                                                 : 3
  16x7-bit single-port Read Only RAM                    : 2
  192x8-bit single-port RAM                             : 1
-# Registers                                            : 69
- 1-bit register                                        : 1
+# Registers                                            : 68
  7-bit register                                        : 2
  8-bit register                                        : 66
+# Latches                                              : 1
+ 1-bit latch                                           : 1
 # Comparators                                          : 2
  8-bit comparator greater                              : 2
 # Multiplexers                                         : 16
@@ -296,8 +298,8 @@ Macro Statistics
 # RAMs                                                 : 3
  16x7-bit single-port distributed Read Only RAM        : 2
  192x8-bit single-port distributed RAM                 : 1
-# Registers                                            : 543
- Flip-Flops                                            : 543
+# Registers                                            : 542
+ Flip-Flops                                            : 542
 # Comparators                                          : 2
  8-bit comparator greater                              : 2
 # Multiplexers                                         : 8
@@ -308,13 +310,37 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    memory_election in unit <ram>
+
 
 Optimizing unit <ram> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block ram, actual ratio is 8.
-FlipFlop memory_election has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -333,8 +359,8 @@ Unit <ram> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 529
- Flip-Flops                                            : 529
+# Registers                                            : 526
+ Flip-Flops                                            : 526
 # Shift Registers                                      : 8
  2-bit shift register                                  : 8
 
@@ -359,18 +385,19 @@ Top Level Output File Name         : ram.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 739
+# BELS                             : 267
 #      GND                         : 1
 #      INV                         : 1
 #      LUT2                        : 2
-#      LUT4                        : 22
-#      LUT6                        : 712
+#      LUT4                        : 86
+#      LUT6                        : 176
 #      VCC                         : 1
-# FlipFlops/Latches                : 537
-#      FD                          : 329
-#      FDC                         : 199
-#      FDE                         : 8
-#      FDP                         : 1
+# FlipFlops/Latches                : 535
+#      FD                          : 14
+#      FDCE                        : 194
+#      FDE                         : 320
+#      FDPE                        : 6
+#      LD                          : 1
 # RAMS                             : 8
 #      RAM256X1S                   : 8
 # Shift Registers                  : 8
@@ -389,19 +416,19 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             537  out of  18224     2%  
- Number of Slice LUTs:                  777  out of   9112     8%  
-    Number used as Logic:               737  out of   9112     8%  
+ Number of Slice Registers:             535  out of  18224     2%  
+ Number of Slice LUTs:                  305  out of   9112     3%  
+    Number used as Logic:               265  out of   9112     2%  
     Number used as Memory:               40  out of   2176     1%  
        Number used as RAM:               32
        Number used as SRL:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    778
-   Number with an unused Flip Flop:     241  out of    778    30%  
-   Number with an unused LUT:             1  out of    778     0%  
-   Number of fully used LUT-FF pairs:   536  out of    778    68%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:    680
+   Number with an unused Flip Flop:     145  out of    680    21%  
+   Number with an unused LUT:           375  out of    680    55%  
+   Number of fully used LUT-FF pairs:   160  out of    680    23%  
+   Number of unique control sets:        67
 
 IO Utilization: 
  Number of IOs:                          42
@@ -431,8 +458,10 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 553   |
+Clk                                | BUFGP                  | 550   |
+N0                                 | NONE(memory_election)  | 1     |
 -----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -442,10 +471,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.945ns (Maximum Frequency: 339.570MHz)
-   Minimum input arrival time before clock: 5.216ns
-   Maximum output required time after clock: 7.754ns
-   Maximum combinational path delay: 10.132ns
+   Minimum period: 1.802ns (Maximum Frequency: 555.078MHz)
+   Minimum input arrival time before clock: 6.158ns
+   Maximum output required time after clock: 7.716ns
+   Maximum combinational path delay: 10.062ns
 
 Timing Details:
 ---------------
@@ -453,52 +482,52 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 2.945ns (frequency: 339.570MHz)
-  Total number of paths / destination ports: 1104 / 550
+  Clock period: 1.802ns (frequency: 555.078MHz)
+  Total number of paths / destination ports: 72 / 30
 -------------------------------------------------------------------------
-Delay:               2.945ns (Levels of Logic = 2)
-  Source:            memory_election_1 (FF)
-  Destination:       contents_ram_specific_40_0 (FF)
+Delay:               1.802ns (Levels of Logic = 1)
+  Source:            contents_ram_specific_49_5 (FF)
+  Destination:       Temp_H_0 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: memory_election_1 to contents_ram_specific_40_0
+  Data Path: contents_ram_specific_49_5 to Temp_H_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              14   0.447   0.958  memory_election_1 (memory_election_1)
-     LUT6:I5->O           17   0.205   1.028  _n0915_inv11 (_n0915_inv1)
-     LUT6:I5->O            1   0.205   0.000  contents_ram_specific_49_0_rstpot (contents_ram_specific_49_0_rstpot)
-     FDC:D                     0.102          contents_ram_specific_49_0
+     FDPE:C->Q             8   0.447   1.050  contents_ram_specific_49_5 (contents_ram_specific_49_5)
+     LUT4:I0->O            1   0.203   0.000  Mram_contents_ram_specific[49][7]_PWR_6_o_wide_mux_303_OUT111 (Mram_contents_ram_specific[49][7]_PWR_6_o_wide_mux_303_OUT1)
+     FD:D                      0.102          Temp_H_1
     ----------------------------------------
-    Total                      2.945ns (0.959ns logic, 1.986ns route)
-                                       (32.6% logic, 67.4% route)
+    Total                      1.802ns (0.752ns logic, 1.050ns route)
+                                       (41.7% logic, 58.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 4894 / 795
+  Total number of paths / destination ports: 4888 / 1304
 -------------------------------------------------------------------------
-Offset:              5.216ns (Levels of Logic = 2)
-  Source:            Reset (PAD)
-  Destination:       contents_ram_specific_41_0 (FF)
+Offset:              6.158ns (Levels of Logic = 3)
+  Source:            address<1> (PAD)
+  Destination:       contents_ram_specific_34_0 (FF)
   Destination Clock: Clk rising
 
-  Data Path: Reset to contents_ram_specific_41_0
+  Data Path: address<1> to contents_ram_specific_34_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            33   1.222   1.305  Reset_IBUF (Reset_IBUF)
-     INV:I->O            200   0.206   2.053  Reset_inv251_INV_0 (Reset_inv)
-     FDC:CLR                   0.430          contents_ram_specific_41_0
+     IBUF:I->O           144   1.222   2.357  address_1_IBUF (address_1_IBUF)
+     LUT6:I0->O            8   0.203   1.050  _n0821_inv11 (_n0821_inv1)
+     LUT4:I0->O            8   0.203   0.802  _n1153_inv1 (_n1153_inv)
+     FDE:CE                    0.322          contents_ram_specific_27_0
     ----------------------------------------
-    Total                      5.216ns (1.858ns logic, 3.358ns route)
-                                       (35.6% logic, 64.4% route)
+    Total                      6.158ns (1.950ns logic, 4.208ns route)
+                                       (31.7% logic, 68.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 542 / 30
+  Total number of paths / destination ports: 534 / 30
 -------------------------------------------------------------------------
-Offset:              7.754ns (Levels of Logic = 5)
+Offset:              7.716ns (Levels of Logic = 5)
   Source:            contents_ram_specific_26_7 (FF)
   Destination:       databus<7> (PAD)
   Source Clock:      Clk rising
@@ -507,21 +536,21 @@ Offset:              7.754ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.864  contents_ram_specific_26_7 (contents_ram_specific_26_7)
+     FDE:C->Q              1   0.447   0.827  contents_ram_specific_26_7 (contents_ram_specific_26_7)
      LUT6:I2->O            1   0.203   0.827  Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_122 (Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_122)
      LUT6:I2->O            1   0.203   0.827  Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_7 (Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_7)
-     LUT6:I2->O            1   0.203   0.827  Mmux_Z_6_o_BUS_0010_MUX_83_o11 (Mmux_Z_6_o_BUS_0010_MUX_83_o1)
-     LUT4:I0->O            1   0.203   0.579  Mmux_Z_6_o_BUS_0010_MUX_83_o12 (databus_7_IOBUF)
+     LUT6:I2->O            1   0.203   0.827  Mmux_Z_6_o_BUS_0010_MUX_84_o11 (Mmux_Z_6_o_BUS_0010_MUX_84_o1)
+     LUT4:I0->O            1   0.203   0.579  Mmux_Z_6_o_BUS_0010_MUX_84_o12 (databus_7_IOBUF)
      IOBUF:I->IO               2.571          databus_7_IOBUF (databus<7>)
     ----------------------------------------
-    Total                      7.754ns (3.830ns logic, 3.924ns route)
-                                       (49.4% logic, 50.6% route)
+    Total                      7.716ns (3.830ns logic, 3.886ns route)
+                                       (49.6% logic, 50.4% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 352 / 8
 -------------------------------------------------------------------------
-Delay:               10.132ns (Levels of Logic = 6)
+Delay:               10.062ns (Levels of Logic = 6)
   Source:            address<0> (PAD)
   Destination:       databus<7> (PAD)
 
@@ -529,15 +558,15 @@ Delay:               10.132ns (Levels of Logic = 6)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           648   1.222   2.467  address_0_IBUF (address_0_IBUF)
+     IBUF:I->O           200   1.222   2.398  address_0_IBUF (address_0_IBUF)
      LUT6:I1->O            1   0.203   0.827  Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_122 (Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_122)
      LUT6:I2->O            1   0.203   0.827  Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_7 (Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>_7)
-     LUT6:I2->O            1   0.203   0.827  Mmux_Z_6_o_BUS_0010_MUX_83_o11 (Mmux_Z_6_o_BUS_0010_MUX_83_o1)
-     LUT4:I0->O            1   0.203   0.579  Mmux_Z_6_o_BUS_0010_MUX_83_o12 (databus_7_IOBUF)
+     LUT6:I2->O            1   0.203   0.827  Mmux_Z_6_o_BUS_0010_MUX_84_o11 (Mmux_Z_6_o_BUS_0010_MUX_84_o1)
+     LUT4:I0->O            1   0.203   0.579  Mmux_Z_6_o_BUS_0010_MUX_84_o12 (databus_7_IOBUF)
      IOBUF:I->IO               2.571          databus_7_IOBUF (databus<7>)
     ----------------------------------------
-    Total                     10.132ns (4.605ns logic, 5.527ns route)
-                                       (45.5% logic, 54.5% route)
+    Total                     10.062ns (4.605ns logic, 5.457ns route)
+                                       (45.8% logic, 54.2% route)
 
 =========================================================================
 
@@ -549,20 +578,20 @@ Clock to Setup on destination clock Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |    2.945|         |         |         |
+Clk            |    1.802|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.35 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.74 secs
  
 --> 
 
-Total memory usage is 294624 kilobytes
+Total memory usage is 261884 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

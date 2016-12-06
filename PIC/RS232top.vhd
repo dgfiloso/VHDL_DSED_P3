@@ -21,7 +21,8 @@ entity RS232top is
     Data_out  : out std_logic_vector(7 downto 0);  -- Received data
     Data_read : in  std_logic;   -- Data read for guest system
     Full      : out std_logic;   -- Full internal memory
-    Empty     : out std_logic);  -- Empty internal memory
+    Empty     : out std_logic;  -- Empty internal memory
+	 FF_Count  : out std_logic_vector(5 downto 0));	-- Number of bytes in fifo
 
 end RS232top;
 
@@ -33,12 +34,12 @@ architecture RTL of RS232top is
 
   component RS232_TX
     port (
-      Clk   : in  std_logic;
-      Reset : in  std_logic;
-      Start : in  std_logic;
-      Data  : in  std_logic_vector(7 downto 0);
-      EOT   : out std_logic;
-      TX    : out std_logic);
+      Clk   	: in  std_logic;
+      Reset 	: in  std_logic;
+      Start 	: in  std_logic;
+      Data  	: in  std_logic_vector(7 downto 0);
+      EOT   	: out std_logic;
+      TX    	: out std_logic);
   end component;
 
   ------------------------------------------------------------------------
@@ -66,14 +67,15 @@ architecture RTL of RS232top is
 
   component fifo
     port (
-      clk   : IN  std_logic;
-      rst   : IN  std_logic;
-      din   : IN  std_logic_VECTOR(7 downto 0);
-      wr_en : IN  std_logic;
-      rd_en : IN  std_logic;
-      dout  : OUT std_logic_VECTOR(7 downto 0);
-      full  : OUT std_logic;
-      empty : OUT std_logic);
+      clk   		: IN  std_logic;
+      rst   		: IN  std_logic;
+      din   		: IN  std_logic_VECTOR(7 downto 0);
+      wr_en 		: IN  std_logic;
+      rd_en 		: IN  std_logic;
+      dout  		: OUT std_logic_VECTOR(7 downto 0);
+      full  		: OUT std_logic;
+      empty 		: OUT std_logic;
+		data_count	: OUT std_logic_VECTOR(5 downto 0));
   end component;
 
   ------------------------------------------------------------------------
@@ -122,14 +124,15 @@ begin  -- RTL
   
   Internal_memory: fifo
     port map (
-      clk   => clk,
-      rst   => sinit,
-      din   => Fifo_in,
-      wr_en => Fifo_write,
-      rd_en => Data_read,
-      dout  => Data_out,
-      full  => Full,
-      empty => Empty);
+      clk   		=> clk,
+      rst   		=> sinit,
+      din   		=> Fifo_in,
+      wr_en 		=> Fifo_write,
+      rd_en 		=> Data_read,
+      dout  		=> Data_out,
+      full  		=> Full,
+      empty 		=> Empty,
+		data_count 	=> FF_Count);
 
   -- purpose: Clocking process for input protocol
   Clocking : process (Clk, Reset)

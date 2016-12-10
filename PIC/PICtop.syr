@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: PICtop.prj
 
@@ -167,8 +167,8 @@ Elaborating entity <RS232_TX> (architecture <Behavioral>) from library <work>.
 Elaborating entity <Pulse_width> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <Data_Count> (architecture <Behavioral>) with generics from library <work>.
-INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" Line 130. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" Line 164. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" Line 139. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" Line 188. Case statement is complete. others clause is never selected
 
 Elaborating entity <RS232_RX> (architecture <Behavioral>) from library <work>.
 
@@ -218,13 +218,15 @@ Unit <RS232top> synthesized.
 
 Synthesizing Unit <RS232_TX>.
     Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd".
+    Found 1-bit register for signal <eleccion>.
+    Found 8-bit register for signal <byte1>.
     Found 2-bit register for signal <PresentState>.
     Found finite state machine <FSM_0> for signal <PresentState>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
     | Transitions        | 8                                              |
     | Inputs             | 3                                              |
-    | Outputs            | 4                                              |
+    | Outputs            | 5                                              |
     | Clock              | Clk (rising_edge)                              |
     | Reset              | Reset (negative)                               |
     | Reset type         | asynchronous                                   |
@@ -233,9 +235,11 @@ Synthesizing Unit <RS232_TX>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit 9-to-1 multiplexer for signal <count[3]_PWR_9_o_Mux_7_o> created at line 149.
+    Found 1-bit 9-to-1 multiplexer for signal <count[3]_PWR_9_o_Mux_12_o> created at line 160.
+    Found 1-bit 9-to-1 multiplexer for signal <count[3]_PWR_9_o_Mux_13_o> created at line 172.
     Summary:
-	inferred   1 Multiplexer(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <RS232_TX> synthesized.
 
@@ -290,7 +294,7 @@ Synthesizing Unit <Pulse_width_2>.
         PulseEndOfCount = 87
     Found 1-bit register for signal <salida>.
     Found 8-bit register for signal <cuenta>.
-    Found 8-bit adder for signal <cuenta[7]_GND_13_o_add_0_OUT> created at line 60.
+    Found 8-bit adder for signal <cuenta[7]_GND_14_o_add_0_OUT> created at line 60.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   9 D-type flip-flop(s).
@@ -316,7 +320,7 @@ WARNING:Xst:647 - Input <TX_RDY> is never used. This port will be preserved and 
     | States             | 4                                              |
     | Transitions        | 9                                              |
     | Inputs             | 3                                              |
-    | Outputs            | 5                                              |
+    | Outputs            | 6                                              |
     | Clock              | Clk (rising_edge)                              |
     | Reset              | Reset (negative)                               |
     | Reset type         | asynchronous                                   |
@@ -325,8 +329,8 @@ WARNING:Xst:647 - Input <TX_RDY> is never used. This port will be preserved and 
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4x1-bit Read Only RAM for signal <count[2]_GND_17_o_Mux_14_o>
-    Found 8x7-bit Read Only RAM for signal <_n0139>
+    Found 4x1-bit Read Only RAM for signal <count[2]_GND_18_o_Mux_14_o>
+    Found 8x7-bit Read Only RAM for signal <_n0140>
     Found 1-bit 3-to-1 multiplexer for signal <READY> created at line 148.
     Found 1-bit 4-to-1 multiplexer for signal <enable_counter> created at line 148.
     Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_count[2]_Mux_30_o> created at line 148.
@@ -361,7 +365,7 @@ Synthesizing Unit <data_counter>.
     Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\data_counter.vhd".
 WARNING:Xst:647 - Input <enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 3-bit register for signal <cuenta>.
-    Found 3-bit adder for signal <cuenta[2]_GND_18_o_add_1_OUT> created at line 56.
+    Found 3-bit adder for signal <cuenta[2]_GND_19_o_add_1_OUT> created at line 56.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   3 D-type flip-flop(s).
@@ -389,12 +393,12 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <content
     Found 8-bit register for signal <contents_ram_specific<18>>.
     Found 8-bit register for signal <contents_ram_specific<17>>.
     Found 8-bit register for signal <contents_ram_specific<16>>.
-    Found 8-bit register for signal <contents_ram_specific<5>>.
-    Found 8-bit register for signal <contents_ram_specific<4>>.
     Found 8-bit register for signal <contents_ram_specific<3>>.
     Found 8-bit register for signal <contents_ram_specific<2>>.
     Found 8-bit register for signal <contents_ram_specific<1>>.
     Found 8-bit register for signal <contents_ram_specific<0>>.
+    Found 8-bit register for signal <contents_ram_specific<5>>.
+    Found 8-bit register for signal <contents_ram_specific<4>>.
     Found 8-bit register for signal <contents_ram_specific<49>>.
     Found 8-bit register for signal <contents_ram_specific<63>>.
     Found 8-bit register for signal <contents_ram_specific<62>>.
@@ -439,8 +443,8 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <content
     Found 7-bit register for signal <Temp_L>.
     Found 8-bit register for signal <valor_Switch>.
     Found 8-bit register for signal <Switches>.
-    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][7]_PWR_56_o_wide_mux_303_OUT>
-    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][3]_PWR_56_o_wide_mux_304_OUT>
+    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][7]_PWR_58_o_wide_mux_303_OUT>
+    Found 16x7-bit Read Only RAM for signal <contents_ram_specific[49][3]_PWR_58_o_wide_mux_304_OUT>
     Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<7>> created at line 60.
     Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<6>> created at line 60.
     Found 1-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<5>> created at line 60.
@@ -458,8 +462,8 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <content
     Found 1-bit tristate buffer for signal <databus<1>> created at line 60
     Found 1-bit tristate buffer for signal <databus<0>> created at line 60
 WARNING:Xst:737 - Found 1-bit latch for signal <memory_election>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 8-bit comparator greater for signal <GND_38_o_address[7]_LessThan_1_o> created at line 37
-    Found 8-bit comparator greater for signal <address[7]_GND_38_o_LessThan_2_o> created at line 39
+    Found 8-bit comparator greater for signal <GND_39_o_address[7]_LessThan_1_o> created at line 37
+    Found 8-bit comparator greater for signal <address[7]_GND_39_o_LessThan_2_o> created at line 39
     Summary:
 	inferred   3 RAM(s).
 	inferred 542 D-type flip-flop(s).
@@ -472,7 +476,6 @@ Unit <ram> synthesized.
 Synthesizing Unit <ALU>.
     Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\ALU.vhd".
     Found 1-bit register for signal <Flag_Z>.
-    Found 1-bit register for signal <u_instruction[4]_Clk_DFF_33>.
     Found 1-bit register for signal <u_instruction[4]_Clk_DFF_34>.
     Found 1-bit register for signal <u_instruction[4]_Clk_DFF_35>.
     Found 1-bit register for signal <u_instruction[4]_Clk_DFF_36>.
@@ -480,6 +483,7 @@ Synthesizing Unit <ALU>.
     Found 1-bit register for signal <u_instruction[4]_Clk_DFF_38>.
     Found 1-bit register for signal <u_instruction[4]_Clk_DFF_39>.
     Found 1-bit register for signal <u_instruction[4]_Clk_DFF_40>.
+    Found 1-bit register for signal <u_instruction[4]_Clk_DFF_41>.
     Found 8-bit register for signal <operandoB>.
     Found 8-bit register for signal <acumulador>.
     Found 8-bit register for signal <index>.
@@ -488,7 +492,7 @@ Synthesizing Unit <ALU>.
     Found 8-bit register for signal <Index_Reg>.
     Found 8-bit register for signal <u_instruction[4]_dff_80_OUT>.
     Found 8-bit adder for signal <operandoA[7]_operandoB[7]_add_0_OUT> created at line 92.
-    Found 8-bit subtractor for signal <GND_49_o_GND_49_o_sub_4_OUT<7:0>> created at line 98.
+    Found 8-bit subtractor for signal <GND_50_o_GND_50_o_sub_4_OUT<7:0>> created at line 98.
     Found 64x8-bit Read Only RAM for signal <_n0291>
     Found 16x8-bit Read Only RAM for signal <_n0294>
     Found 32x2-bit Read Only RAM for signal <_n0449>
@@ -533,12 +537,12 @@ WARNING:Xst:647 - Input <ROM_Data<11:8>> is never used. This port will be preser
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 8-bit adder for signal <PC_reg[7]_GND_75_o_add_7_OUT> created at line 96.
+    Found 8-bit adder for signal <PC_reg[7]_GND_76_o_add_7_OUT> created at line 96.
     Found 8-bit adder for signal <TMP_reg[7]_Index_Reg[7]_add_24_OUT> created at line 245.
-    Found 64x5-bit Read Only RAM for signal <INS_reg[5]_GND_75_o_wide_mux_8_OUT>
-    Found 4x1-bit Read Only RAM for signal <INS_reg[4]_GND_92_o_Mux_168_o>
+    Found 64x5-bit Read Only RAM for signal <INS_reg[5]_GND_76_o_wide_mux_8_OUT>
+    Found 4x1-bit Read Only RAM for signal <INS_reg[4]_GND_93_o_Mux_168_o>
     Found 32x5-bit Read Only RAM for signal <_n0599>
-    Found 5-bit 4-to-1 multiplexer for signal <INS_reg[7]_GND_75_o_wide_mux_34_OUT> created at line 100.
+    Found 5-bit 4-to-1 multiplexer for signal <INS_reg[7]_GND_76_o_wide_mux_34_OUT> created at line 100.
     Found 1-bit tristate buffer for signal <Databus<7>> created at line 42
     Found 1-bit tristate buffer for signal <Databus<6>> created at line 42
     Found 1-bit tristate buffer for signal <Databus<5>> created at line 42
@@ -594,23 +598,23 @@ Macro Statistics
  4-bit adder                                           : 2
  8-bit adder                                           : 6
  8-bit addsub                                          : 1
-# Registers                                            : 102
- 1-bit register                                        : 17
+# Registers                                            : 104
+ 1-bit register                                        : 18
  3-bit register                                        : 1
  4-bit register                                        : 2
  7-bit register                                        : 2
- 8-bit register                                        : 80
+ 8-bit register                                        : 81
 # Latches                                              : 2
  1-bit latch                                           : 2
 # Comparators                                          : 5
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 4
-# Multiplexers                                         : 96
- 1-bit 2-to-1 multiplexer                              : 57
+# Multiplexers                                         : 98
+ 1-bit 2-to-1 multiplexer                              : 58
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 2
  1-bit 64-to-1 multiplexer                             : 8
- 1-bit 9-to-1 multiplexer                              : 1
+ 1-bit 9-to-1 multiplexer                              : 2
  12-bit 2-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 2
  5-bit 4-to-1 multiplexer                              : 1
@@ -630,7 +634,7 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 
 Reading core <ipcore_dir/fifo.ngc>.
 Loading core <fifo> for timing and area information for instance <Internal_memory>.
-INFO:Xst:2261 - The FF/Latch <u_instruction[4]_Clk_DFF_33> in Unit <ALU_Unit> is equivalent to the following 7 FFs/Latches, which will be removed : <u_instruction[4]_Clk_DFF_34> <u_instruction[4]_Clk_DFF_35> <u_instruction[4]_Clk_DFF_36> <u_instruction[4]_Clk_DFF_37> <u_instruction[4]_Clk_DFF_38> <u_instruction[4]_Clk_DFF_39> <u_instruction[4]_Clk_DFF_40> 
+INFO:Xst:2261 - The FF/Latch <u_instruction[4]_Clk_DFF_34> in Unit <ALU_Unit> is equivalent to the following 7 FFs/Latches, which will be removed : <u_instruction[4]_Clk_DFF_35> <u_instruction[4]_Clk_DFF_36> <u_instruction[4]_Clk_DFF_37> <u_instruction[4]_Clk_DFF_38> <u_instruction[4]_Clk_DFF_39> <u_instruction[4]_Clk_DFF_40> <u_instruction[4]_Clk_DFF_41> 
 
 Synthesizing (advanced) Unit <ALU>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0449> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -670,7 +674,7 @@ Unit <ALU> synthesized (advanced).
 
 Synthesizing (advanced) Unit <CPU>.
 The following registers are absorbed into counter <PC_reg>: 1 register on signal <PC_reg>.
-INFO:Xst:3231 - The small RAM <Mram_INS_reg[5]_GND_75_o_wide_mux_8_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_INS_reg[5]_GND_76_o_wide_mux_8_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -692,7 +696,7 @@ INFO:Xst:3231 - The small RAM <Mram__n0599> will be implemented on LUTs in order
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram_INS_reg[4]_GND_92_o_Mux_168_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_INS_reg[4]_GND_93_o_Mux_168_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -706,7 +710,7 @@ INFO:Xst:3231 - The small RAM <Mram_INS_reg[4]_GND_92_o_Mux_168_o> will be imple
 Unit <CPU> synthesized (advanced).
 
 Synthesizing (advanced) Unit <DMA>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_count[2]_GND_17_o_Mux_14_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_count[2]_GND_18_o_Mux_14_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -717,7 +721,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_count[2]_GND_17_o_Mux_14_o> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0139> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0140> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -761,7 +765,7 @@ The following registers are absorbed into counter <cuenta>: 1 register on signal
 Unit <data_counter> synthesized (advanced).
 
 Synthesizing (advanced) Unit <ram>.
-INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][7]_PWR_56_o_wide_mux_303_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][7]_PWR_58_o_wide_mux_303_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -772,7 +776,7 @@ INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][7]_PWR_56_o_wide_m
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][3]_PWR_56_o_wide_mux_304_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_contents_ram_specific[49][3]_PWR_58_o_wide_mux_304_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -819,17 +823,17 @@ Macro Statistics
  3-bit up counter                                      : 1
  4-bit up counter                                      : 2
  8-bit up counter                                      : 4
-# Registers                                            : 639
- Flip-Flops                                            : 639
+# Registers                                            : 648
+ Flip-Flops                                            : 648
 # Comparators                                          : 5
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 4
-# Multiplexers                                         : 82
- 1-bit 2-to-1 multiplexer                              : 47
+# Multiplexers                                         : 84
+ 1-bit 2-to-1 multiplexer                              : 48
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 2
  1-bit 64-to-1 multiplexer                             : 8
- 1-bit 9-to-1 multiplexer                              : 1
+ 1-bit 9-to-1 multiplexer                              : 2
  12-bit 2-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 2
  5-bit 4-to-1 multiplexer                              : 1
@@ -843,7 +847,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <u_instruction[4]_Clk_DFF_33> in Unit <ALU> is equivalent to the following 7 FFs/Latches, which will be removed : <u_instruction[4]_Clk_DFF_34> <u_instruction[4]_Clk_DFF_35> <u_instruction[4]_Clk_DFF_36> <u_instruction[4]_Clk_DFF_37> <u_instruction[4]_Clk_DFF_38> <u_instruction[4]_Clk_DFF_39> <u_instruction[4]_Clk_DFF_40> 
+INFO:Xst:2261 - The FF/Latch <u_instruction[4]_Clk_DFF_34> in Unit <ALU> is equivalent to the following 7 FFs/Latches, which will be removed : <u_instruction[4]_Clk_DFF_35> <u_instruction[4]_Clk_DFF_36> <u_instruction[4]_Clk_DFF_37> <u_instruction[4]_Clk_DFF_38> <u_instruction[4]_Clk_DFF_39> <u_instruction[4]_Clk_DFF_40> <u_instruction[4]_Clk_DFF_41> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <RS232_PHY/Transmitter/FSM_0> on signal <PresentState[1:2]> with gray encoding.
 ----------------------
@@ -927,15 +931,7 @@ Optimizing unit <RS232_RX> ...
 
 Optimizing unit <ShiftRegister> ...
 WARNING:Xst:2677 - Node <RS232_PHY/Ack_in> of sequential type is unconnected in block <PICtop>.
-WARNING:Xst:1710 - FF/Latch <RS232_PHY/Data_FF_7> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_6> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_5> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_4> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_3> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_2> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_1> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Data_FF_0> (without init value) has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RS232_PHY/Receiver/HalfBitCounter/cuenta_7> has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RS232_PHY/Receiver/HalfBitCounter/cuenta_7> has a constant value of 0 in block <PICtop>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -965,8 +961,8 @@ Unit <PICtop> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 660
- Flip-Flops                                            : 660
+# Registers                                            : 677
+ Flip-Flops                                            : 677
 # Shift Registers                                      : 8
  2-bit shift register                                  : 8
 
@@ -991,27 +987,27 @@ Top Level Output File Name         : PICtop.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 827
+# BELS                             : 851
 #      GND                         : 3
 #      INV                         : 9
 #      LUT1                        : 8
 #      LUT2                        : 63
-#      LUT3                        : 32
-#      LUT4                        : 122
-#      LUT5                        : 44
-#      LUT6                        : 417
+#      LUT3                        : 33
+#      LUT4                        : 121
+#      LUT5                        : 50
+#      LUT6                        : 434
 #      MUXCY                       : 48
-#      MUXF7                       : 17
+#      MUXF7                       : 18
 #      MUXF8                       : 8
 #      VCC                         : 1
 #      XORCY                       : 55
-# FlipFlops/Latches                : 715
+# FlipFlops/Latches                : 732
 #      FD                          : 29
-#      FDC                         : 13
-#      FDCE                        : 275
+#      FDC                         : 14
+#      FDCE                        : 285
 #      FDE                         : 348
 #      FDP                         : 13
-#      FDPE                        : 1
+#      FDPE                        : 7
 #      FDR                         : 26
 #      FDRE                        : 8
 #      LD                          : 2
@@ -1033,19 +1029,19 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             715  out of  18224     3%  
- Number of Slice LUTs:                  735  out of   9112     8%  
-    Number used as Logic:               695  out of   9112     7%  
+ Number of Slice Registers:             732  out of  18224     4%  
+ Number of Slice LUTs:                  758  out of   9112     8%  
+    Number used as Logic:               718  out of   9112     7%  
     Number used as Memory:               40  out of   2176     1%  
        Number used as RAM:               32
        Number used as SRL:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1255
-   Number with an unused Flip Flop:     540  out of   1255    43%  
-   Number with an unused LUT:           520  out of   1255    41%  
-   Number of fully used LUT-FF pairs:   195  out of   1255    15%  
-   Number of unique control sets:        93
+ Number of LUT Flip Flop pairs used:   1283
+   Number with an unused Flip Flop:     551  out of   1283    42%  
+   Number with an unused LUT:           525  out of   1283    40%  
+   Number of fully used LUT-FF pairs:   207  out of   1283    16%  
+   Number of unique control sets:        95
 
 IO Utilization: 
  Number of IOs:                          26
@@ -1077,7 +1073,7 @@ Clock Information:
 -------------------------------------------------------------------------------------------------+-------------------------------+-------+
 Clock Signal                                                                                     | Clock buffer(FF name)         | Load  |
 -------------------------------------------------------------------------------------------------+-------------------------------+-------+
-Clk                                                                                              | BUFGP                         | 730   |
+Clk                                                                                              | BUFGP                         | 747   |
 DMA_Unit/current_state[1]_count[2]_Mux_98_o(DMA_Unit/Mmux_current_state[1]_count[2]_Mux_98_o11:O)| NONE(*)(DMA_Unit/DMA_RQ)      | 1     |
 N1                                                                                               | NONE(RAM_Unit/memory_election)| 1     |
 -------------------------------------------------------------------------------------------------+-------------------------------+-------+
@@ -1095,8 +1091,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 8.406ns (Maximum Frequency: 118.967MHz)
-   Minimum input arrival time before clock: 5.131ns
-   Maximum output required time after clock: 4.681ns
+   Minimum input arrival time before clock: 5.133ns
+   Maximum output required time after clock: 6.854ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1106,7 +1102,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
   Clock period: 8.406ns (frequency: 118.967MHz)
-  Total number of paths / destination ports: 1115158 / 1506
+  Total number of paths / destination ports: 1128978 / 1539
 -------------------------------------------------------------------------
 Delay:               8.406ns (Levels of Logic = 7)
   Source:            CPU_Unit/INS_reg_4 (FF)
@@ -1119,12 +1115,12 @@ Delay:               8.406ns (Levels of Logic = 7)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q             16   0.447   1.233  CPU_Unit/INS_reg_4 (CPU_Unit/INS_reg_4)
-     LUT6:I3->O            9   0.205   0.830  CPU_Unit/Mmux_GND_75_o_INS_reg[4]_MUX_203_o181 (CPU_Unit/Mmux_GND_75_o_INS_reg[4]_MUX_203_o18)
-     LUT2:I1->O           10   0.205   0.857  Address<1>LogicTrst3_SW1 (N24)
+     LUT6:I3->O            9   0.205   0.830  CPU_Unit/Mmux_GND_76_o_INS_reg[4]_MUX_208_o181 (CPU_Unit/Mmux_GND_76_o_INS_reg[4]_MUX_208_o18)
+     LUT2:I1->O            9   0.205   0.830  Address<1>LogicTrst3_SW1 (N26)
      LUT6:I5->O           18   0.205   1.050  Address<1>LogicTrst3_6 (Address<1>LogicTrst35)
      LUT6:I5->O            1   0.205   0.827  RAM_Unit/Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<0>_13 (RAM_Unit/Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<0>_13)
      LUT6:I2->O            1   0.203   0.827  RAM_Unit/Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<0>_7 (RAM_Unit/Mmux_address[5]_contents_ram_specific[63][7]_wide_mux_3_OUT<0>_7)
-     LUT6:I2->O            8   0.203   0.803  Databus<0>LogicTrst2 (Databus<0>LogicTrst2)
+     LUT6:I2->O            9   0.203   0.830  Databus<0>LogicTrst2 (Databus<0>LogicTrst2)
      LUT6:I5->O           17   0.205   0.000  Databus<0>LogicTrst3 (Databus<0>)
      FDCE:D                    0.102          RAM_Unit/contents_ram_specific_40_0
     ----------------------------------------
@@ -1133,9 +1129,9 @@ Delay:               8.406ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 839 / 839
+  Total number of paths / destination ports: 856 / 856
 -------------------------------------------------------------------------
-Offset:              5.131ns (Levels of Logic = 2)
+Offset:              5.133ns (Levels of Logic = 2)
   Source:            Reset (PAD)
   Destination:       DMA_Unit/current_state_FSM_FFd1 (FF)
   Destination Clock: Clk rising
@@ -1145,31 +1141,33 @@ Offset:              5.131ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            26   1.222   1.206  Reset_IBUF (Reset_IBUF)
-     INV:I->O            267   0.206   2.067  ALU_Unit/Reset_inv1_INV_0 (ALU_Unit/Reset_inv)
+     INV:I->O            284   0.206   2.069  ALU_Unit/Reset_inv1_INV_0 (ALU_Unit/Reset_inv)
      FDCE:CLR                  0.430          ALU_Unit/acumulador_0
     ----------------------------------------
-    Total                      5.131ns (1.858ns logic, 3.273ns route)
+    Total                      5.133ns (1.858ns logic, 3.275ns route)
                                        (36.2% logic, 63.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 25 / 23
+  Total number of paths / destination ports: 52 / 23
 -------------------------------------------------------------------------
-Offset:              4.681ns (Levels of Logic = 2)
-  Source:            RS232_PHY/Transmitter/Data_Control/cuenta_3 (FF)
+Offset:              6.854ns (Levels of Logic = 4)
+  Source:            RS232_PHY/Transmitter/Data_Control/cuenta_2 (FF)
   Destination:       RS232_TX (PAD)
   Source Clock:      Clk rising
 
-  Data Path: RS232_PHY/Transmitter/Data_Control/cuenta_3 to RS232_TX
+  Data Path: RS232_PHY/Transmitter/Data_Control/cuenta_2 to RS232_TX
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.447   0.879  RS232_PHY/Transmitter/Data_Control/cuenta_3 (RS232_PHY/Transmitter/Data_Control/cuenta_3)
-     LUT3:I0->O            1   0.205   0.579  RS232_PHY/Transmitter/TX1 (RS232_TX_OBUF)
+     FDRE:C->Q             7   0.447   1.138  RS232_PHY/Transmitter/Data_Control/cuenta_2 (RS232_PHY/Transmitter/Data_Control/cuenta_2)
+     LUT6:I0->O            1   0.203   0.827  RS232_PHY/Transmitter/TX1 (RS232_PHY/Transmitter/TX)
+     LUT6:I2->O            1   0.203   0.684  RS232_PHY/Transmitter/TX6 (RS232_PHY/Transmitter/TX5)
+     LUT3:I1->O            1   0.203   0.579  RS232_PHY/Transmitter/TX7 (RS232_TX_OBUF)
      OBUF:I->O                 2.571          RS232_TX_OBUF (RS232_TX)
     ----------------------------------------
-    Total                      4.681ns (3.223ns logic, 1.458ns route)
-                                       (68.9% logic, 31.1% route)
+    Total                      6.854ns (3.627ns logic, 3.227ns route)
+                                       (52.9% logic, 47.1% route)
 
 =========================================================================
 
@@ -1190,20 +1188,20 @@ Clock to Setup on destination clock DMA_Unit/current_state[1]_count[2]_Mux_98_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |         |         |    2.013|         |
+Clk            |         |         |    2.238|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 18.13 secs
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 17.21 secs
  
 --> 
 
-Total memory usage is 295744 kilobytes
+Total memory usage is 295752 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   24 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
 Number of infos    :   22 (   0 filtered)
 

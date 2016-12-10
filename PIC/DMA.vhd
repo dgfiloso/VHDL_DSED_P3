@@ -135,7 +135,7 @@ end process;
 outputs : process (current_state, RCVD_Data, Databus, Send_comm, count)
 begin
 	Data_Read <= '0';    
-	Valid_D <= '0';      
+	Valid_D <= '1';      
 	Address <= (others => 'Z');
 	Databus <= (others => 'Z');
 	TX_Data <= (others => '0');
@@ -185,7 +185,7 @@ begin
 		--Transmission --
 		
 		when Tx =>
-			Valid_D <= '1';
+			Valid_D <= '0';
 			OE <= '0';
 			enable_counter <= '1';
 			reset_counter <= '0';
@@ -204,7 +204,7 @@ begin
 			end case;
 		when others =>
 			Data_Read <= '0';    
-			Valid_D <= '0';      
+			Valid_D <= '1';      
 			Address <= (others => 'Z');
 			Databus <= (others => 'Z');
 			TX_Data <= (others => '0');

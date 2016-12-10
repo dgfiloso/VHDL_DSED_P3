@@ -44,17 +44,17 @@ architecture Behavioral of RS232_TX is
 
 	component Pulse_Width
     port (
-      clk   : in  std_logic;
-      reset : in  std_logic;
-      enable : in  std_logic;
-      send    : out std_logic);
+      clk   : in  STD_LOGIC;
+      reset : in  STD_LOGIC;
+      enable : in  STD_LOGIC;
+      send    : out STD_LOGIC);
   end component;
   
   component Data_Count
     port (
-      clk   : in  std_logic;
-      reset : in  std_logic;
-      enable : in  std_logic;
+      clk   : in  STD_LOGIC;
+      reset : in  STD_LOGIC;
+      enable : in  STD_LOGIC;
       count : out  STD_LOGIC_VECTOR (3 downto 0));
   end component;
 
@@ -64,10 +64,12 @@ architecture Behavioral of RS232_TX is
 						StopBit);
 
 	signal PresentState, NextState : State;
-	signal send : std_logic;
-	signal count : std_logic_vector(3 downto 0);
-	signal reset_data : std_logic;
-	signal reset_control : std_logic;
+	signal send 			: STD_LOGIC;
+	signal count 			: STD_LOGIC_VECTOR(3 downto 0);
+	signal reset_data 	: STD_LOGIC;
+	signal reset_control : STD_LOGIC;
+	signal byte1 			: STD_LOGIC_VECTOR(7 downto 0);
+	signal eleccion 		: STD_LOGIC;
 	
 begin
 
@@ -92,16 +94,23 @@ begin
 	begin
 		if Reset ='0' then
 			PresentState <= Idle;
+			eleccion <= '0';
+			byte1 <= (others => '0');
 		elsif Clk'event and Clk = '1' then
+			if PresentState = Idle then
+				byte1 <= data;			
+			elsif PresentState = SendData and count = "1000" then
+				eleccion <= not eleccion;
+			end if;
 			PresentState <= NextState;
 		end if;
 	end process;
 	
-	Siguiente : process(PresentState, Start, send, count)
+	Siguiente : process(PresentState, Start, send, count, eleccion, data)
 	begin 
 		case PresentState is
 			when Idle =>
-				if Start = '1' then
+				if Start = '1' or eleccion = '1' then
 					NextState <= StartBit;
 				else
 					NextState <= Idle;
@@ -132,7 +141,7 @@ begin
 		end case;
 	end process;
 
-	Salidas : process(PresentState, count, data)
+	Salidas : process(PresentState, count, data, byte1, eleccion)
 	begin
 		case PresentState is 
 			when Idle =>
@@ -146,17 +155,31 @@ begin
 			when SendData => 
 				EOT <= '0';
 				reset_data <= '1';
-				case count is
-					when "0000" => TX <= data(0);
-					when "0001" => TX <= data(1);
-					when "0010" => TX <= data(2);
-					when "0011" => TX <= data(3);
-					when "0100" => TX <= data(4);
-					when "0101" => TX <= data(5);
-					when "0110" => TX <= data(6);
-					when "0111" => TX <= data(7);
-					when others => TX <= '1';
-			end case;
+				if eleccion = '0' then
+					case count is
+						when "0000" => TX <= byte1(0);
+						when "0001" => TX <= byte1(1);
+						when "0010" => TX <= byte1(2);
+						when "0011" => TX <= byte1(3);
+						when "0100" => TX <= byte1(4);
+						when "0101" => TX <= byte1(5);
+						when "0110" => TX <= byte1(6);
+						when "0111" => TX <= byte1(7);
+						when others => TX <= '1';
+					end case;
+				elsif eleccion = '1' then
+					case count is
+						when "0000" => TX <= data(0);
+						when "0001" => TX <= data(1);
+						when "0010" => TX <= data(2);
+						when "0011" => TX <= data(3);
+						when "0100" => TX <= data(4);
+						when "0101" => TX <= data(5);
+						when "0110" => TX <= data(6);
+						when "0111" => TX <= data(7);
+						when others => TX <= '1';
+					end case;
+				end if;
 			when StopBit => 
 				reset_data <= '0';
 				EOT <= '0';

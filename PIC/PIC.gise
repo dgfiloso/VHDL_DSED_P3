@@ -53,13 +53,24 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="PICtop.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="PICtop_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="PICtop_summary.html"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PICtop_tb_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PICtop_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="PICtop_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="PICtop_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="PICtop_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Pulse_width.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Pulse_width.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Pulse_width.xst"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="RS232_TX.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="RS232_TX.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="RS232_TX.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="RS232_TX.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RS232_TX.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="RS232_TX.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="RS232_TX.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="RS232_TX.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RS232_TX_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RS232_TX_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RS232_TX_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RS232top.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RS232top.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="RS232top.xst"/>
@@ -92,11 +103,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1480593909" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1480593909">
+    <transform xil_pn:end_ts="1481372137" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1481372137">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1481022725" xil_pn:in_ck="-5200947182852340698" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1481022724">
+    <transform xil_pn:end_ts="1481372137" xil_pn:in_ck="-5200947182852340698" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1481372137">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -121,21 +132,21 @@
       <outfile xil_pn:name="tb_PICtop.vhd"/>
       <outfile xil_pn:name="tb_ram.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1481022601" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7088115255787224138" xil_pn:start_ts="1481022601">
+    <transform xil_pn:end_ts="1481372463" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7088115255787224138" xil_pn:start_ts="1481372463">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1481022601" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5561742413903045832" xil_pn:start_ts="1481022601">
+    <transform xil_pn:end_ts="1481372463" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5561742413903045832" xil_pn:start_ts="1481372463">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1480593910" xil_pn:in_ck="2640052728245442763" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6371873352513400306" xil_pn:start_ts="1480593909">
+    <transform xil_pn:end_ts="1481372463" xil_pn:in_ck="2640052728245442763" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6371873352513400306" xil_pn:start_ts="1481372463">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/fifo.ngc"/>
       <outfile xil_pn:name="ipcore_dir/fifo.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1481022725" xil_pn:in_ck="-5200947182852340698" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1481022725">
+    <transform xil_pn:end_ts="1481372137" xil_pn:in_ck="-7164733012693651767" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1481372137">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -153,6 +164,7 @@
       <outfile xil_pn:name="RS232top.vhd"/>
       <outfile xil_pn:name="ShiftRegister.vhd"/>
       <outfile xil_pn:name="data_counter.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/fifo.vhd"/>
       <outfile xil_pn:name="lib/RS232_test.vhd"/>
       <outfile xil_pn:name="tb_ALU.vhd"/>
       <outfile xil_pn:name="tb_Comunicador.vhd"/>
@@ -160,22 +172,19 @@
       <outfile xil_pn:name="tb_PICtop.vhd"/>
       <outfile xil_pn:name="tb_ram.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1481022732" xil_pn:in_ck="-7164733012693651767" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="28504062078608228" xil_pn:start_ts="1481022725">
+    <transform xil_pn:end_ts="1481372471" xil_pn:in_ck="-7164733012693651767" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="28504062078608228" xil_pn:start_ts="1481372463">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="PICtop_tb_beh.prj"/>
       <outfile xil_pn:name="PICtop_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1481022742" xil_pn:in_ck="7073895835027914421" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2495850213833957969" xil_pn:start_ts="1481022741">
+    <transform xil_pn:end_ts="1481372472" xil_pn:in_ck="7073895835027914421" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2495850213833957969" xil_pn:start_ts="1481372471">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="PICtop_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -184,56 +193,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1481024253" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5412786549258031805" xil_pn:start_ts="1481024253">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1481024254" xil_pn:in_ck="2640052728245442763" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6371873352513400306" xil_pn:start_ts="1481024253">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ipcore_dir/fifo.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/fifo.vhd"/>
-    </transform>
-    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1481024254" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-5892835803601880635" xil_pn:start_ts="1481024254">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1481024254" xil_pn:in_ck="-5111980336448140134" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1481024254">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1481024254" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="8572820123914608508" xil_pn:start_ts="1481024254">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1481024278" xil_pn:in_ck="-2646245953189127985" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-7252152739586708853" xil_pn:start_ts="1481024254">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ALU.ngr"/>
-      <outfile xil_pn:name="DMA.ngr"/>
-      <outfile xil_pn:name="PICtop.lso"/>
-      <outfile xil_pn:name="PICtop.ngc"/>
-      <outfile xil_pn:name="PICtop.ngr"/>
-      <outfile xil_pn:name="PICtop.prj"/>
-      <outfile xil_pn:name="PICtop.stx"/>
-      <outfile xil_pn:name="PICtop.syr"/>
-      <outfile xil_pn:name="PICtop.xst"/>
-      <outfile xil_pn:name="PICtop_tb_beh.prj"/>
-      <outfile xil_pn:name="PICtop_xst.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="ram.ngr"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
-    </transform>
     <transform xil_pn:end_ts="1479387493" xil_pn:in_ck="3818596305887355" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3351448343400692134" xil_pn:start_ts="1479387493">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 

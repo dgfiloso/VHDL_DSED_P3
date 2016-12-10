@@ -1,0 +1,485 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: RS232_TX.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RS232_TX.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RS232_TX"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : RS232_TX
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\Pulse_width.vhd" into library work
+Parsing entity <Pulse_width>.
+Parsing architecture <Behavioral> of entity <pulse_width>.
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\Data_Count.vhd" into library work
+Parsing entity <Data_Count>.
+Parsing architecture <Behavioral> of entity <data_count>.
+Parsing VHDL file "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" into library work
+Parsing entity <RS232_TX>.
+Parsing architecture <Behavioral> of entity <rs232_tx>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <RS232_TX> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Pulse_width> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Data_Count> (architecture <Behavioral>) with generics from library <work>.
+INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" Line 139. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd" Line 187. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <RS232_TX>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\RS232_TX.vhd".
+    Found 1-bit register for signal <eleccion>.
+    Found 8-bit register for signal <byte1>.
+    Found 2-bit register for signal <PresentState>.
+    Found finite state machine <FSM_0> for signal <PresentState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 6                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit 9-to-1 multiplexer for signal <count[3]_PWR_6_o_Mux_12_o> created at line 159.
+    Found 1-bit 9-to-1 multiplexer for signal <count[3]_PWR_6_o_Mux_13_o> created at line 171.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <RS232_TX> synthesized.
+
+Synthesizing Unit <Pulse_width>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\Pulse_width.vhd".
+        PulseEndOfCount = 174
+    Found 1-bit register for signal <salida>.
+    Found 8-bit register for signal <cuenta>.
+    Found 8-bit adder for signal <cuenta[7]_cuenta[7]_mux_2_OUT> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+Unit <Pulse_width> synthesized.
+
+Synthesizing Unit <Data_Count>.
+    Related source file is "E:\David\Teleco\Curso_2016-2017\DSED\Practica 3\PIC\Data_Count.vhd".
+        DataEndOfCount = 8
+    Found 4-bit register for signal <cuenta>.
+    Found 4-bit adder for signal <cuenta[3]_GND_8_o_add_1_OUT> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <Data_Count> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 5
+ 1-bit register                                        : 2
+ 4-bit register                                        : 1
+ 8-bit register                                        : 2
+# Multiplexers                                         : 3
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 9-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Data_Count>.
+The following registers are absorbed into counter <cuenta>: 1 register on signal <cuenta>.
+Unit <Data_Count> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Pulse_width>.
+The following registers are absorbed into counter <cuenta>: 1 register on signal <cuenta>.
+Unit <Pulse_width> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+# Multiplexers                                         : 3
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 9-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <PresentState[1:2]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 00
+ startbit | 01
+ senddata | 11
+ stopbit  | 10
+----------------------
+
+Optimizing unit <RS232_TX> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block RS232_TX, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : RS232_TX.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 57
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 7
+#      LUT2                        : 10
+#      LUT3                        : 3
+#      LUT4                        : 3
+#      LUT5                        : 2
+#      LUT6                        : 12
+#      MUXCY                       : 7
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 24
+#      FD                          : 13
+#      FDC                         : 3
+#      FDCE                        : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 10
+#      OBUF                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              24  out of  18224     0%  
+ Number of Slice LUTs:                   39  out of   9112     0%  
+    Number used as Logic:                39  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     42
+   Number with an unused Flip Flop:      18  out of     42    42%  
+   Number with an unused LUT:             3  out of     42     7%  
+   Number of fully used LUT-FF pairs:    21  out of     42    50%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 24    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.434ns (Maximum Frequency: 291.193MHz)
+   Minimum input arrival time before clock: 3.643ns
+   Maximum output required time after clock: 6.107ns
+   Maximum combinational path delay: 6.592ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 3.434ns (frequency: 291.193MHz)
+  Total number of paths / destination ports: 171 / 24
+-------------------------------------------------------------------------
+Delay:               3.434ns (Levels of Logic = 3)
+  Source:            Pulse_Control/cuenta_0 (FF)
+  Destination:       Pulse_Control/cuenta_1 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: Pulse_Control/cuenta_0 to Pulse_Control/cuenta_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.845  Pulse_Control/cuenta_0 (Pulse_Control/cuenta_0)
+     LUT3:I0->O            3   0.205   0.651  Pulse_Control/GND_7_o_GND_7_o_equal_5_o<7>_SW0 (N4)
+     LUT6:I5->O            7   0.205   0.774  Pulse_Control/Mcount_cuenta_val1 (Pulse_Control/Mcount_cuenta_val)
+     LUT2:I1->O            1   0.205   0.000  Pulse_Control/cuenta_1_rstpot (Pulse_Control/cuenta_1_rstpot)
+     FD:D                      0.102          Pulse_Control/cuenta_1
+    ----------------------------------------
+    Total                      3.434ns (1.164ns logic, 2.270ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              3.643ns (Levels of Logic = 3)
+  Source:            Reset (PAD)
+  Destination:       Pulse_Control/cuenta_1 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Reset to Pulse_Control/cuenta_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.222   1.138  Reset_IBUF (Reset_IBUF)
+     LUT6:I0->O            7   0.203   0.774  Pulse_Control/Mcount_cuenta_val1 (Pulse_Control/Mcount_cuenta_val)
+     LUT2:I1->O            1   0.205   0.000  Pulse_Control/cuenta_1_rstpot (Pulse_Control/cuenta_1_rstpot)
+     FD:D                      0.102          Pulse_Control/cuenta_1
+    ----------------------------------------
+    Total                      3.643ns (1.732ns logic, 1.911ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 27 / 2
+-------------------------------------------------------------------------
+Offset:              6.107ns (Levels of Logic = 4)
+  Source:            Data_Control/cuenta_2 (FF)
+  Destination:       TX (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: Data_Control/cuenta_2 to TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.447   1.138  Data_Control/cuenta_2 (Data_Control/cuenta_2)
+     LUT6:I0->O            1   0.203   0.827  TX1 (TX1)
+     LUT6:I2->O            1   0.203   0.000  TX7_G (N17)
+     MUXF7:I1->O           1   0.140   0.579  TX7 (TX_OBUF)
+     OBUF:I->O                 2.571          TX_OBUF (TX)
+    ----------------------------------------
+    Total                      6.107ns (3.564ns logic, 2.543ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 1
+-------------------------------------------------------------------------
+Delay:               6.592ns (Levels of Logic = 5)
+  Source:            Data<6> (PAD)
+  Destination:       TX (PAD)
+
+  Data Path: Data<6> to TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.845  Data_6_IBUF (Data_6_IBUF)
+     LUT6:I3->O            1   0.205   0.827  TX1 (TX1)
+     LUT6:I2->O            1   0.203   0.000  TX7_G (N17)
+     MUXF7:I1->O           1   0.140   0.579  TX7 (TX_OBUF)
+     OBUF:I->O                 2.571          TX_OBUF (TX)
+    ----------------------------------------
+    Total                      6.592ns (4.341ns logic, 2.251ns route)
+                                       (65.9% logic, 34.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    3.434|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.06 secs
+ 
+--> 
+
+Total memory usage is 294624 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
